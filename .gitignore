@@ -392,3 +392,9 @@
 !/requirements-dev.txt
 !/tools/source_policy.py
 !/tools/tests/test_source_policy.py
+
+# 공개본 문서
+!/docs/
+!/docs/images/
+!/docs/*.md
+!/docs/images/*.png
