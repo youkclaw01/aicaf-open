@@ -1,0 +1,27 @@
+P0 기준을 적용하여 stage=review 결과를 작성한다. stage_data.draft는 검토할 실제 JSON 결과다. deterministic_check_result는 먼저 실행한 구조·참조·수치 검사 결과이며 사실 검증의 대체가 아니다.
+
+다음 권위를 구분해 검토한다.
+- 관찰: 이 프로젝트의 수집 필드·범위·시점·상태 또는 인터뷰 인용.
+- 판정: 사실적 전제, 적용성, 검증된 규칙과 공식 기준의 modality.
+- 권고·시사점: 현재 고객 목표에 적용 가능한 Microsoft 기준과 사실에서 영향으로의 추론.
+- 레이아웃: 승인 보고서의 형태와 v18 디자인, 추가 이미지의 관계. 실제 렌더가 없으면 render_not_checked로 구분한다.
+
+결함은 where/quote/why/fix 및 evidence_refs를 기록한다. where는 draft 안의 실제 JSON pointer다. quote는 해당 위치의 실제 문구 또는 값이어야 한다. 없는 문장을 만들어 지적하지 않는다. 모델의 합의나 다른 검토자의 지적을 증거로 인용하지 않는다.
+
+검토할 내용:
+1. WARA 분석·PPT 또는 Assessment-Findings-Report·Expert-Analysis 결과 Excel의 재포장, 샘플 수치·고객·제품·비용 내용의 혼입.
+2. 수집 실패·범위 밖을 실제 부재·미흡으로 단정, Consider의 강제화, 제목·본문 확신 수준 충돌.
+3. 실제 리소스 존재에서 호출·연결·데이터 유출·정책 강제·절차 부재를 근거 없이 추론.
+4. U138078 Fact Finding·시사점 종합 원본과 U138079 진단·Action Item 원본의 역할 누락·혼동, Fact Finding→시사점→진단→Action Item 참조와 연결의 누락·불일치·고립·교차 개정.
+5. 고객 목표·보안·거버넌스 요구의 누락, 신규·기도입 혼동, 일반 제품 권고만 있는 시사점.
+6. 전문 컨설턴트 문체·공식 명칭·사실/가정/위험의 구분, 구어체·챗봇 문구·의인화·내부 구현명의 혼입.
+7. 승인 형식의 무단 재구성, 중요한 근거 삭제, 실제 다이어그램 미완성을 완료로 표현.
+
+새 고객 사실이나 숫자를 계산하여 반박하지 않는다. 검증 가능한 오류만 결함으로 기록한다. 근거 부족으로 판단할 수 없으면 blocked와 필요한 근거를 기록한다. broadly correct 결과에 취향상 결함을 만들어 무제한 재작성을 요구하지 않는다.
+
+verdict는 pass/revise/blocked다. pass에는 해결되지 않은 결함을 남기지 않는다. content_checked와 render_checked를 별도 반환한다. 실제 렌더가 제공되지 않은 경우 render_checked=false이며 전체 출판 완료를 판정하지 않는다.
+
+반환 구조: {stage, run, verdict,content_checked,render_checked,defects:[{where,quote,why,fix,evidence_refs}], unresolved:[{topic,reason,required_evidence,fact_refs}]}
+
+입력:
+{{stage_input_json}}

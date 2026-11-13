@@ -1,0 +1,111 @@
+{
+  "source": "synthetic_probe_not_customer",
+  "resources": [
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.Network/virtualNetworks/VNET-EXAMPLE-01",
+      "type": "Microsoft.Network/virtualNetworks",
+      "name": "VNET-EXAMPLE-01",
+      "location": "koreacentral",
+      "resourceGroup": "RG-EXAMPLE-01",
+      "zones": []
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.Compute/virtualMachines/VM-EXAMPLE-01",
+      "type": "Microsoft.Compute/virtualMachines",
+      "name": "VM-EXAMPLE-01",
+      "location": "koreacentral",
+      "resourceGroup": "RG-EXAMPLE-01",
+      "zones": []
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.Network/networkInterfaces/NIC-EXAMPLE-01",
+      "type": "Microsoft.Network/networkInterfaces",
+      "name": "NIC-EXAMPLE-01",
+      "location": "koreacentral",
+      "resourceGroup": "RG-EXAMPLE-01",
+      "zones": [],
+      "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.Compute/virtualMachines/VM-EXAMPLE-01"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.Network/privateEndpoints/PE-EXAMPLE-01",
+      "type": "Microsoft.Network/privateEndpoints",
+      "name": "PE-EXAMPLE-01",
+      "location": "koreacentral",
+      "resourceGroup": "RG-EXAMPLE-01",
+      "zones": []
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.CognitiveServices/accounts/FD-EXAMPLE-01",
+      "type": "Microsoft.CognitiveServices/accounts",
+      "name": "FD-EXAMPLE-01",
+      "location": "koreacentral",
+      "resourceGroup": "RG-EXAMPLE-01",
+      "zones": []
+    }
+  ],
+  "relationships": [
+    {
+      "type": "private_endpoint_target",
+      "sourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.Network/privateEndpoints/PE-EXAMPLE-01",
+      "targetId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.CognitiveServices/accounts/FD-EXAMPLE-01"
+    }
+  ],
+  "configurations": {
+    "virtualNetworks": [
+      {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.Network/virtualNetworks/VNET-EXAMPLE-01",
+        "addressPrefixes": [
+          "10.50.0.0/16"
+        ]
+      }
+    ],
+    "subnets": [
+      {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.Network/virtualNetworks/VNET-EXAMPLE-01/subnets/SUB-APP-01",
+        "name": "SUB-APP-01",
+        "vnetId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.Network/virtualNetworks/VNET-EXAMPLE-01",
+        "addressPrefixes": [
+          "10.50.1.0/24"
+        ]
+      },
+      {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.Network/virtualNetworks/VNET-EXAMPLE-01/subnets/SUB-PE-01",
+        "name": "SUB-PE-01",
+        "vnetId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.Network/virtualNetworks/VNET-EXAMPLE-01",
+        "addressPrefixes": [
+          "10.50.2.0/24"
+        ]
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.Network/networkInterfaces/NIC-EXAMPLE-01",
+        "subnetId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.Network/virtualNetworks/VNET-EXAMPLE-01/subnets/SUB-APP-01",
+        "privateIpAddress": "10.50.1.4",
+        "publicIpId": null
+      }
+    ],
+    "platformServiceConfiguration": [
+      {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.Compute/virtualMachines/VM-EXAMPLE-01",
+        "networkProfile": {
+          "networkInterfaceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.Network/networkInterfaces/NIC-EXAMPLE-01"
+          ]
+        }
+      }
+    ],
+    "privateEndpointConfiguration": [
+      {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.Network/privateEndpoints/PE-EXAMPLE-01",
+        "subnetId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.Network/virtualNetworks/VNET-EXAMPLE-01/subnets/SUB-PE-01"
+      }
+    ],
+    "foundryAccountConfiguration": [
+      {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-EXAMPLE-01/providers/Microsoft.CognitiveServices/accounts/FD-EXAMPLE-01",
+        "publicNetworkAccess": "Enabled"
+      }
+    ]
+  }
+}

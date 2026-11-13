@@ -1,0 +1,1042 @@
+[
+  {
+    "id": "WAF-AI-RE1",
+    "quote": "Mitigate single points of failure.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-RE2",
+    "quote": "Conduct failure mode analysis. Take advantage of well-known design patterns.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-RE3",
+    "quote": "Balance reliability objectives across dependent components.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-RE4",
+    "quote": "Design for operational reliability.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-RE5",
+    "quote": "Design for a reliable user experience.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-SE1",
+    "quote": "Earn user trust.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-SE2",
+    "quote": "Protect data at rest, in transit, and in use, according to the sensitivity requirements of the workload.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-SE3",
+    "quote": "Invest in robust access management for identities (user and system) that access the system.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-SE4",
+    "quote": "Protect the integrity of the design by implementing segmentation.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-SE5",
+    "quote": "Conduct security testing.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-SE6",
+    "quote": "Reduce the attack surface by enforcing strict user access and API design.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-CO1",
+    "quote": "Determine the cost drivers by doing a comprehensive cost modeling exercise.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "WAF-AI-CO2",
+    "quote": "Pay for what you intend to use.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-CO3",
+    "quote": "Use what you pay for. Minimize waste.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-CO4",
+    "quote": "Optimize operational costs.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-OE1",
+    "quote": "Choose technologies that minimize operational burden.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-OE2",
+    "quote": "Create an automated monitoring system that supports alerting functionality, including logging and auditability.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-OE3",
+    "quote": "Automate the detection and mitigation of model decay.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-OE4",
+    "quote": "Implement safe deployments.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-OE5",
+    "quote": "Continuously evaluate the user experience in production.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-PE1",
+    "quote": "Establish performance benchmarks.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-PE2",
+    "quote": "Evaluate resource needs for meeting performance targets.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-PE3",
+    "quote": "Collect and analyze performance metrics, and identify bottlenecks.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-PE4",
+    "quote": "Continuously improve benchmark performance by using quality measurements from production.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-PE5",
+    "quote": "Implement automated collection and analysis of performance metrics, alerts, and model retraining to maintain model efficacy.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_snapshot_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "checked_at": "2026-10-10T16:23:07.731622+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-GOV1",
+    "quote": "1. Assess AI organizational risks",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/govern",
+    "source_snapshot_sha256": "e866ee1e6c6b6cc9d2ef38f3229e03374d39045d03b68299ff77d0434f4318a5",
+    "checked_at": "2026-10-10T16:23:05.212976+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-GOV2",
+    "quote": "2. Document AI governance policies",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/govern",
+    "source_snapshot_sha256": "e866ee1e6c6b6cc9d2ef38f3229e03374d39045d03b68299ff77d0434f4318a5",
+    "checked_at": "2026-10-10T16:23:05.212976+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-GOV3",
+    "quote": "3. Enforce AI governance policies",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/govern",
+    "source_snapshot_sha256": "e866ee1e6c6b6cc9d2ef38f3229e03374d39045d03b68299ff77d0434f4318a5",
+    "checked_at": "2026-10-10T16:23:05.212976+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-GOV4",
+    "quote": "4. Monitor AI organizational risks",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/govern",
+    "source_snapshot_sha256": "e866ee1e6c6b6cc9d2ef38f3229e03374d39045d03b68299ff77d0434f4318a5",
+    "checked_at": "2026-10-10T16:23:05.212976+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-SEC1",
+    "quote": "Discover AI security risks",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/secure",
+    "source_snapshot_sha256": "aea3fbd542d374145a401a9840b92b448e211ee59b8156279e5d76463392f286",
+    "checked_at": "2026-10-10T16:23:06.378862+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-SEC2",
+    "quote": "Protect AI resources and data",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/secure",
+    "source_snapshot_sha256": "aea3fbd542d374145a401a9840b92b448e211ee59b8156279e5d76463392f286",
+    "checked_at": "2026-10-10T16:23:06.378862+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-SEC3",
+    "quote": "Detect AI security threats",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/secure",
+    "source_snapshot_sha256": "aea3fbd542d374145a401a9840b92b448e211ee59b8156279e5d76463392f286",
+    "checked_at": "2026-10-10T16:23:06.378862+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-MNG1",
+    "quote": "Manage AI operations",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/manage",
+    "source_snapshot_sha256": "3d1c8cf7381b22002444381e27791e1de0c3306f741edccdd7e65cb30eeb2446",
+    "checked_at": "2026-10-10T16:23:05.550387+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-MNG2",
+    "quote": "Manage AI deployment",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/manage",
+    "source_snapshot_sha256": "3d1c8cf7381b22002444381e27791e1de0c3306f741edccdd7e65cb30eeb2446",
+    "checked_at": "2026-10-10T16:23:05.550387+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-MNG3",
+    "quote": "Manage AI models",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/manage",
+    "source_snapshot_sha256": "3d1c8cf7381b22002444381e27791e1de0c3306f741edccdd7e65cb30eeb2446",
+    "checked_at": "2026-10-10T16:23:05.550387+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-MNG4",
+    "quote": "Manage AI costs",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/manage",
+    "source_snapshot_sha256": "3d1c8cf7381b22002444381e27791e1de0c3306f741edccdd7e65cb30eeb2446",
+    "checked_at": "2026-10-10T16:23:05.550387+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-MNG5",
+    "quote": "Manage AI data",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/manage",
+    "source_snapshot_sha256": "3d1c8cf7381b22002444381e27791e1de0c3306f741edccdd7e65cb30eeb2446",
+    "checked_at": "2026-10-10T16:23:05.550387+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-MNG6",
+    "quote": "Manage AI business continuity",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/manage",
+    "source_snapshot_sha256": "3d1c8cf7381b22002444381e27791e1de0c3306f741edccdd7e65cb30eeb2446",
+    "checked_at": "2026-10-10T16:23:05.550387+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-RDY1",
+    "quote": "AI governance",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/ready",
+    "source_snapshot_sha256": "13cbaa599604108630d33d76cd2045b4b8bf372276bf49e0c6f0ba0a78f64b37",
+    "checked_at": "2026-10-10T16:23:05.980847+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-RDY2",
+    "quote": "AI networking",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/ready",
+    "source_snapshot_sha256": "13cbaa599604108630d33d76cd2045b4b8bf372276bf49e0c6f0ba0a78f64b37",
+    "checked_at": "2026-10-10T16:23:05.980847+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-RDY3",
+    "quote": "AI reliability",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/ready",
+    "source_snapshot_sha256": "13cbaa599604108630d33d76cd2045b4b8bf372276bf49e0c6f0ba0a78f64b37",
+    "checked_at": "2026-10-10T16:23:05.980847+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-RDY4",
+    "quote": "AI in an Azure landing zone",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/ready",
+    "source_snapshot_sha256": "13cbaa599604108630d33d76cd2045b4b8bf372276bf49e0c6f0ba0a78f64b37",
+    "checked_at": "2026-10-10T16:23:05.980847+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-STR1",
+    "quote": "1. AI use case identification",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/strategy",
+    "source_snapshot_sha256": "d2b5596be3c27f3e8272f155b20e6be3b6363319f59ca53ad1165471d547bdd8",
+    "checked_at": "2026-10-10T16:23:06.777204+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-STR2",
+    "quote": "2. AI technology strategy",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/strategy",
+    "source_snapshot_sha256": "d2b5596be3c27f3e8272f155b20e6be3b6363319f59ca53ad1165471d547bdd8",
+    "checked_at": "2026-10-10T16:23:06.777204+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-STR3",
+    "quote": "3. Responsible AI strategy",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/strategy",
+    "source_snapshot_sha256": "d2b5596be3c27f3e8272f155b20e6be3b6363319f59ca53ad1165471d547bdd8",
+    "checked_at": "2026-10-10T16:23:06.777204+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-STR4",
+    "quote": "4. Data strategy",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/strategy",
+    "source_snapshot_sha256": "d2b5596be3c27f3e8272f155b20e6be3b6363319f59ca53ad1165471d547bdd8",
+    "checked_at": "2026-10-10T16:23:06.777204+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "CAF-AI-STR5",
+    "quote": "5. How to adopt AI",
+    "source_url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/strategy",
+    "source_snapshot_sha256": "d2b5596be3c27f3e8272f155b20e6be3b6363319f59ca53ad1165471d547bdd8",
+    "checked_at": "2026-10-10T16:23:06.777204+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-APP1",
+    "quote": "Distinguish between inferencing and intelligent applications",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/application-design",
+    "source_snapshot_sha256": "a03e460cac602cc0a6283a5584a0381b812a4721bd10bccfe37080281abceb6f",
+    "checked_at": "2026-10-10T16:23:07.136109+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-APP2",
+    "quote": "Fundamental AI application design guidelines",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/application-design",
+    "source_snapshot_sha256": "a03e460cac602cc0a6283a5584a0381b812a4721bd10bccfe37080281abceb6f",
+    "checked_at": "2026-10-10T16:23:07.136109+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-APP3",
+    "quote": "Plan for model deprecation",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/application-design",
+    "source_snapshot_sha256": "a03e460cac602cc0a6283a5584a0381b812a4721bd10bccfe37080281abceb6f",
+    "checked_at": "2026-10-10T16:23:07.136109+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-APP4",
+    "quote": "Containerize components",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/application-design",
+    "source_snapshot_sha256": "a03e460cac602cc0a6283a5584a0381b812a4721bd10bccfe37080281abceb6f",
+    "checked_at": "2026-10-10T16:23:07.136109+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-APP5",
+    "quote": "Implement multi-layer caching strategies",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/application-design",
+    "source_snapshot_sha256": "a03e460cac602cc0a6283a5584a0381b812a4721bd10bccfe37080281abceb6f",
+    "checked_at": "2026-10-10T16:23:07.136109+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-APP6",
+    "quote": "Evaluate the use of orchestration and agents in generative AI solutions",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/application-design",
+    "source_snapshot_sha256": "a03e460cac602cc0a6283a5584a0381b812a4721bd10bccfe37080281abceb6f",
+    "checked_at": "2026-10-10T16:23:07.136109+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-APP7",
+    "quote": "Implement AI gateways for policy enforcement",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/application-design",
+    "source_snapshot_sha256": "a03e460cac602cc0a6283a5584a0381b812a4721bd10bccfe37080281abceb6f",
+    "checked_at": "2026-10-10T16:23:07.136109+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-APP8",
+    "quote": "Use AI application design patterns",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/application-design",
+    "source_snapshot_sha256": "a03e460cac602cc0a6283a5584a0381b812a4721bd10bccfe37080281abceb6f",
+    "checked_at": "2026-10-10T16:23:07.136109+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-APP9",
+    "quote": "Choose the right frameworks, libraries, and protocols",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/application-design",
+    "source_snapshot_sha256": "a03e460cac602cc0a6283a5584a0381b812a4721bd10bccfe37080281abceb6f",
+    "checked_at": "2026-10-10T16:23:07.136109+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-APP10",
+    "quote": "Design a security strategy for your workload's AI components",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/application-design",
+    "source_snapshot_sha256": "a03e460cac602cc0a6283a5584a0381b812a4721bd10bccfe37080281abceb6f",
+    "checked_at": "2026-10-10T16:23:07.136109+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-APP11",
+    "quote": "Consider nonfunctional requirements",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/application-design",
+    "source_snapshot_sha256": "a03e460cac602cc0a6283a5584a0381b812a4721bd10bccfe37080281abceb6f",
+    "checked_at": "2026-10-10T16:23:07.136109+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "WAF-AI-RAI1",
+    "quote": "Develop policies for responsible AI",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/responsible-ai",
+    "source_snapshot_sha256": "1fd951e36a2bdbe41de1cfe963aff431b2c1102aaf66bf8b01dc3ed1963406f5",
+    "checked_at": "2026-10-10T16:45:09.572385+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-RAI2",
+    "quote": "Enforce governance on policies for responsible AI",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/responsible-ai",
+    "source_snapshot_sha256": "1fd951e36a2bdbe41de1cfe963aff431b2c1102aaf66bf8b01dc3ed1963406f5",
+    "checked_at": "2026-10-10T16:45:09.572385+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-RAI3",
+    "quote": "Make the user experience safe",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/responsible-ai",
+    "source_snapshot_sha256": "1fd951e36a2bdbe41de1cfe963aff431b2c1102aaf66bf8b01dc3ed1963406f5",
+    "checked_at": "2026-10-10T16:45:09.572385+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-RAI4",
+    "quote": "Implement agentic AI safeguards",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/responsible-ai",
+    "source_snapshot_sha256": "1fd951e36a2bdbe41de1cfe963aff431b2c1102aaf66bf8b01dc3ed1963406f5",
+    "checked_at": "2026-10-10T16:45:09.572385+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-RAI5",
+    "quote": "Operationalize content safety measures",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/responsible-ai",
+    "source_snapshot_sha256": "1fd951e36a2bdbe41de1cfe963aff431b2c1102aaf66bf8b01dc3ed1963406f5",
+    "checked_at": "2026-10-10T16:45:09.572385+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-RAI6",
+    "quote": "Inspect incoming and outgoing data",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/responsible-ai",
+    "source_snapshot_sha256": "1fd951e36a2bdbe41de1cfe963aff431b2c1102aaf66bf8b01dc3ed1963406f5",
+    "checked_at": "2026-10-10T16:45:09.572385+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-RAI7",
+    "quote": "Handle user data appropriately",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/responsible-ai",
+    "source_snapshot_sha256": "1fd951e36a2bdbe41de1cfe963aff431b2c1102aaf66bf8b01dc3ed1963406f5",
+    "checked_at": "2026-10-10T16:45:09.572385+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-OPS1",
+    "quote": "Workload operations lifecycle",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/mlops-genaiops",
+    "source_snapshot_sha256": "6b4c68ab68ce3da2c3855518b96259c2c6f1e99aed85f79567145bce7e981cdf",
+    "checked_at": "2026-10-10T16:23:08.161927+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-OPS2",
+    "quote": "Automation",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/mlops-genaiops",
+    "source_snapshot_sha256": "6b4c68ab68ce3da2c3855518b96259c2c6f1e99aed85f79567145bce7e981cdf",
+    "checked_at": "2026-10-10T16:23:08.161927+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-OPS3",
+    "quote": "Deployment pipelines",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/mlops-genaiops",
+    "source_snapshot_sha256": "6b4c68ab68ce3da2c3855518b96259c2c6f1e99aed85f79567145bce7e981cdf",
+    "checked_at": "2026-10-10T16:23:08.161927+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-OPS4",
+    "quote": "Model maintenance",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/mlops-genaiops",
+    "source_snapshot_sha256": "6b4c68ab68ce3da2c3855518b96259c2c6f1e99aed85f79567145bce7e981cdf",
+    "checked_at": "2026-10-10T16:23:08.161927+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "WAF-AI-OPS5",
+    "quote": "Continuous evolution",
+    "source_url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/mlops-genaiops",
+    "source_snapshot_sha256": "6b4c68ab68ce3da2c3855518b96259c2c6f1e99aed85f79567145bce7e981cdf",
+    "checked_at": "2026-10-10T16:23:08.161927+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "MCSB-AOAI-NS-1",
+    "quote": "Establish network segmentation boundaries",
+    "source_url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-openai-security-baseline",
+    "source_snapshot_sha256": "9c56fd478b7686ac4b2921740d092996b2bc85288057e9b8f9d19c72c381f5eb",
+    "checked_at": "2026-10-10T16:23:08.510029+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "MCSB-AOAI-NS-2",
+    "quote": "Secure cloud services with network controls",
+    "source_url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-openai-security-baseline",
+    "source_snapshot_sha256": "9c56fd478b7686ac4b2921740d092996b2bc85288057e9b8f9d19c72c381f5eb",
+    "checked_at": "2026-10-10T16:23:08.510029+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "MCSB-AOAI-IM-1",
+    "quote": "Use centralized identity and authentication system",
+    "source_url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-openai-security-baseline",
+    "source_snapshot_sha256": "9c56fd478b7686ac4b2921740d092996b2bc85288057e9b8f9d19c72c381f5eb",
+    "checked_at": "2026-10-10T16:23:08.510029+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "MCSB-AOAI-IM-3",
+    "quote": "Manage application identities securely and automatically",
+    "source_url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-openai-security-baseline",
+    "source_snapshot_sha256": "9c56fd478b7686ac4b2921740d092996b2bc85288057e9b8f9d19c72c381f5eb",
+    "checked_at": "2026-10-10T16:23:08.510029+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "MCSB-AOAI-IM-7",
+    "quote": "Restrict resource access based on conditions",
+    "source_url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-openai-security-baseline",
+    "source_snapshot_sha256": "9c56fd478b7686ac4b2921740d092996b2bc85288057e9b8f9d19c72c381f5eb",
+    "checked_at": "2026-10-10T16:23:08.510029+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "MCSB-AOAI-IM-8",
+    "quote": "Restrict the exposure of credential and secrets",
+    "source_url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-openai-security-baseline",
+    "source_snapshot_sha256": "9c56fd478b7686ac4b2921740d092996b2bc85288057e9b8f9d19c72c381f5eb",
+    "checked_at": "2026-10-10T16:23:08.510029+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "MCSB-AOAI-PA-7",
+    "quote": "Follow just enough administration (least privilege) principle",
+    "source_url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-openai-security-baseline",
+    "source_snapshot_sha256": "9c56fd478b7686ac4b2921740d092996b2bc85288057e9b8f9d19c72c381f5eb",
+    "checked_at": "2026-10-10T16:23:08.510029+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "MCSB-AOAI-PA-8",
+    "quote": "Determine access process for cloud provider support",
+    "source_url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-openai-security-baseline",
+    "source_snapshot_sha256": "9c56fd478b7686ac4b2921740d092996b2bc85288057e9b8f9d19c72c381f5eb",
+    "checked_at": "2026-10-10T16:23:08.510029+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "MCSB-AOAI-DP-1",
+    "quote": "Discover, classify, and label sensitive data",
+    "source_url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-openai-security-baseline",
+    "source_snapshot_sha256": "9c56fd478b7686ac4b2921740d092996b2bc85288057e9b8f9d19c72c381f5eb",
+    "checked_at": "2026-10-10T16:23:08.510029+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "MCSB-AOAI-DP-2",
+    "quote": "Monitor anomalies and threats targeting sensitive data",
+    "source_url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-openai-security-baseline",
+    "source_snapshot_sha256": "9c56fd478b7686ac4b2921740d092996b2bc85288057e9b8f9d19c72c381f5eb",
+    "checked_at": "2026-10-10T16:23:08.510029+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "MCSB-AOAI-DP-3",
+    "quote": "Encrypt sensitive data in transit",
+    "source_url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-openai-security-baseline",
+    "source_snapshot_sha256": "9c56fd478b7686ac4b2921740d092996b2bc85288057e9b8f9d19c72c381f5eb",
+    "checked_at": "2026-10-10T16:23:08.510029+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "MCSB-AOAI-DP-4",
+    "quote": "Enable data at rest encryption by default",
+    "source_url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-openai-security-baseline",
+    "source_snapshot_sha256": "9c56fd478b7686ac4b2921740d092996b2bc85288057e9b8f9d19c72c381f5eb",
+    "checked_at": "2026-10-10T16:23:08.510029+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "MCSB-AOAI-DP-5",
+    "quote": "Use customer-managed key option in data at rest encryption when required",
+    "source_url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-openai-security-baseline",
+    "source_snapshot_sha256": "9c56fd478b7686ac4b2921740d092996b2bc85288057e9b8f9d19c72c381f5eb",
+    "checked_at": "2026-10-10T16:23:08.510029+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "MCSB-AOAI-DP-6",
+    "quote": "Use a secure key management process",
+    "source_url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-openai-security-baseline",
+    "source_snapshot_sha256": "9c56fd478b7686ac4b2921740d092996b2bc85288057e9b8f9d19c72c381f5eb",
+    "checked_at": "2026-10-10T16:23:08.510029+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "MCSB-AOAI-AM-2",
+    "quote": "Use only approved services",
+    "source_url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-openai-security-baseline",
+    "source_snapshot_sha256": "9c56fd478b7686ac4b2921740d092996b2bc85288057e9b8f9d19c72c381f5eb",
+    "checked_at": "2026-10-10T16:23:08.510029+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "MCSB-AOAI-LT-4",
+    "quote": "Enable logging for security investigation",
+    "source_url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-openai-security-baseline",
+    "source_snapshot_sha256": "9c56fd478b7686ac4b2921740d092996b2bc85288057e9b8f9d19c72c381f5eb",
+    "checked_at": "2026-10-10T16:23:08.510029+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-C-R1",
+    "quote": "Determine the compute options of your models, orchestrators, self hosted agents and application (frontend, backend & Ingestion) in an AI Landing Zone.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-CO-R1",
+    "quote": "Familirize yourself with pricing & billing model of Azure AI Foundry and its services",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-CO-R2",
+    "quote": "Consider having PTU & PAYGO Endpoints endpoints. If you have predictable workloads, use AI commitment tiers in Azure AI services. For Azure OpenAI models, use provisioned throughput units (PTUs), which can be less expensive than pay-as-you-go (consumption-based) pricing.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-CO-R3",
+    "quote": "Consider the various Azure OpenAI deployment types in particular the global deployment type.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-CO-R4",
+    "quote": "Cosider implementing auto shutdown policy for compute resources in non-prod environment.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-D-R1",
+    "quote": "Determine how stateful entities such as threads, messages, and runs created during usage along with files uploaded during Foundry Agent Service setup or as part of a message are managed",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-D-R2",
+    "quote": "Determine whether thread storage (conversation history, agent definitions), file storage (uploaded documents), vector search (embeddings and retrieval) will be shared by all project or separated by projects",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-D-R3",
+    "quote": "In case you have Microsoft Fabric, determine how you would surface data from it into AI Foundry",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-G-R1",
+    "quote": "Consider using built-in AI related policies for governance of AI resources and AI apps",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-G-R2",
+    "quote": "Review applicable industry standards such as the NIST Artificial Intelligence Risk Management Framework (AI RMF) and NIST AI RMF Playbook and ensure alignment and compliance with them.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-G-R3",
+    "quote": "Consider implementing responsible AI standards",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-G-R4",
+    "quote": "Consider implementing Azure AI Content Safety APIs that can be called for testing to facilitate content safety testing.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-G-R5",
+    "quote": "Govern model availability in your organization across applications and workload",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-I-R1",
+    "quote": "Consider using managed identities with least privilege access.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-I-R2",
+    "quote": "Leverage MFA and PIM for sensitive accounts.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-I-R3",
+    "quote": "Use Microsoft Entra ID for authentication",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-I-R4",
+    "quote": "Use Conditional Access policies",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-I-R5",
+    "quote": "Configure least privilege access",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-I-R6",
+    "quote": "Disable key based access and only have access to AI Model endpoints using Microsoft Entra ID.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-M-R1",
+    "quote": "Monitor AI models , AI resources , AI data of the workload",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-M-R2",
+    "quote": "Review recommended alerts for AI in Azure Monitor Baseline Alerts.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-M-R3",
+    "quote": "Monitor the performance of a generative AI application",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-M-R4",
+    "quote": "Have diagnostic settings configured to capture logs and metrics of all deployed resources to a log analytics workspace.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-M-R5",
+    "quote": "Monitor model & data drift.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-M-R6",
+    "quote": "Leverage Azure Monitor insights and Azure network watcher for trouble shooting networking issues.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-REL-R1",
+    "quote": "Multi Region Disaster Recovery : Consider Multi Region in at least two regions to provide high availability and ensure for Disaster Recovery.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-RO-R1",
+    "quote": "Select regions based on the combination of regional availability of Azure Services and their configuration.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-RO-R2",
+    "quote": "Review quota required to deploy the resources.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-RO-R3",
+    "quote": "Consider Azure subscription and region quota limits",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-RO-R4",
+    "quote": "Consider scaling through multi-account and multi-project deployment.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-S-R1",
+    "quote": "Review the Microsoft Defender for Cloud Recommendations for compliance.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-S-R2",
+    "quote": "Comply with Microsoft Cloud Security Baseline",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-S-R3",
+    "quote": "Leverage Purview to secure data in an AI landing zone.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-S-R4",
+    "quote": "Review Industry Security Standards for AI",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-S-R5",
+    "quote": "Monitor outputs and apply prompt shielding using AI Content Safety.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-N-R1",
+    "quote": "Leverrage DDoS in case the workload is public facing. In case of existing platform landing zone, the central DDoS service should be used instead.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-N-R2",
+    "quote": "Use a jumpbox that can be accessed through bastion. In case of existing platform landing zone the central jump box and bastion service should be used instead.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-N-R3",
+    "quote": "Use Private endpoint for the AI resources and infact for all PaaS services.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-N-R4",
+    "quote": "Use Network Security Groups in the AI Landing Zone on all virtual networks implemented as part of the architecture.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-N-R5",
+    "quote": "Use App Gateway or Azure Front Door with WAF in the AI Landing Zone for the application public front-end based on regional or global deployment.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-N-R6",
+    "quote": "Consider APIM as AI Gateway in the AI landing zone with AI Foundry.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "consider"
+  },
+  {
+    "id": "AILZ-N-R7",
+    "quote": "Use Firewall either in the AI Landing Zone or from the platform landing zone (preferred) along with a UDR to the Azure or 3P Firewall.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-N-R8",
+    "quote": "Use Private DNS Zones either in the AI Landing Zone or from the platform landing zone (preferred) for integrated private endpoints with Private DNS Zones for proper DNS resolution and successful private endpoint functionality.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  },
+  {
+    "id": "AILZ-N-R9",
+    "quote": "Restrict Outbound by default in the AI Landing Zone should provide guidance and implementation restricting outbound access by default.",
+    "source_url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_snapshot_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "checked_at": "2026-10-10T16:23:04.851044+00:00",
+    "modality": "should"
+  }
+]

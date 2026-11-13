@@ -1,0 +1,12 @@
+P0 기준을 적용하여 stage=summary 결과를 작성한다. stage_data에는 검증 완료된 상세 분석·시사점 종합·진단·Action Item만 있다.
+
+이번 보고서의 가장 중요한 현재 상태, 고객 목표에 대한 영향과 개선 방향을 임원이 판단할 수 있도록 요약한다. headline과 message는 현재 근거의 확신 수준을 넘지 않는다. key_points에는 할당된 summary ID, text, fact_refs, criterion_refs, goal_refs를 작성한다. direction_refs와 action_refs로 상세 결과와 연결한다.
+
+핵심 숫자는 입력 measurements에서 그대로 인용하고 재계산하지 않는다. 표본 보고서의 30개 항목·15개 미흡·5개 개선 방향을 고정하지 않는다. 판단이 달라진 내용을 ‘정상 산출물 보존’이라는 이유로 유지하지 않는다. 개선 효과·절감액·추정 위험 확률을 새로 만들지 않는다.
+
+보고서의 실제 구성과 상태를 설명한다. 추가 다이어그램 자리, 미수집 영역, 부분 검증을 완료라고 쓰지 않는다. 요약에 등장한 모든 개선 방향과 과제는 상세 결과에 존재해야 한다.
+
+반환 구조: {stage, run, summary:{headline,message,key_points:[{id,text,fact_refs,criterion_refs,goal_refs}],direction_refs,action_refs,decision_points}, unresolved:[{topic,reason,required_evidence,fact_refs}]}
+
+입력:
+{{stage_input_json}}

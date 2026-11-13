@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI CAF Assessment</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+/* ── AI Assessment 디자인 시스템 (Apple HIG 기준, 단일 정의) ── */
+:root{
+ --ink:#1d1d1f;--ink2:#424245;--muted:#6e6e73;--faint:#86868b;
+ --bg:#f5f5f7;--surface:#fff;--fill:#e8e8ed;--fill2:#f5f5f7;--line:#d2d2d7;--hair:#ebebf0;
+ --blue:#0071e3;--blue-h:#0077ed;--link:#0066cc;--blue-t:#e8f1fc;
+ --purple:#8944ab;--purple-t:#f4ecf8;--red:#e30000;--red-t:#fdeeee;--green:#248a3d;--green-t:#eaf6ec;--orange:#b64400;--orange-t:#fdf1e7;
+ --r-sm:8px;--r:12px;--r-lg:18px;--pill:980px;
+ --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;
+ --ease:cubic-bezier(.28,.11,.32,1);--shadow:0 4px 24px rgba(0,0,0,.06);
+ --navy:var(--ink);--teal:var(--blue);--slate:var(--muted);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.47 "SF Pro Text",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard Variable",Pretendard,"Malgun Gothic",sans-serif;letter-spacing:-.022em;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+/* 상단 바 */
+header{position:sticky;top:0;z-index:10;height:44px;background:rgba(251,251,253,.82);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.08)}
+header .hdr{max-width:1024px;height:44px;margin:0 auto;padding:0 var(--s5);display:flex;align-items:center;justify-content:space-between}
+header .logo{display:flex;opacity:.85}header .logo:hover{opacity:1}
+header nav{flex:1;display:flex;justify-content:center;gap:40px}
+header nav a{font-size:12px;color:var(--ink);opacity:.8;letter-spacing:-.01em}header nav a:hover{opacity:1;text-decoration:none}
+header .me{font-size:12px;color:var(--muted);white-space:nowrap}header .me a{color:var(--ink);opacity:.8}
+
+/* 레이아웃·타이포 */
+main{max-width:1024px;margin:0 auto;padding:0 var(--s5) var(--s7)}
+.hero{padding:var(--s7) 0 var(--s5)}
+.hero h1{margin:0;font-size:40px;line-height:1.1;font-weight:600;letter-spacing:-.03em;color:var(--muted)}
+h1 b,h2 b{color:var(--ink);font-weight:600}
+h2{margin:0 0 var(--s5);font-size:24px;line-height:1.17;font-weight:600;letter-spacing:-.025em;color:var(--muted)}
+h2:not(:has(b)){color:var(--ink)}
+h3{margin:0 0 var(--s3);font-size:19px;line-height:1.21;font-weight:600;letter-spacing:-.02em;color:var(--ink)}
+.q{font-size:17px;font-weight:600;line-height:1.35}
+.muted{color:var(--muted);font-size:14px;line-height:1.43;letter-spacing:-.016em}
+.hint{margin-left:var(--s2);font-size:14px;font-weight:400;color:var(--faint)}
+.score{font-size:28px;font-weight:600;letter-spacing:-.02em;color:var(--ink)}
+
+/* 카드 */
+.card{background:var(--surface);border-radius:var(--r-lg);padding:var(--s6);margin-bottom:var(--s5);box-shadow:var(--shadow)}
+.card.row{padding:var(--s4) var(--s6)}
+.kpi{background:var(--surface);border-radius:var(--r);padding:var(--s4);box-shadow:inset 0 0 0 1px var(--line);transition:background .2s var(--ease),color .2s var(--ease),box-shadow .2s var(--ease)}
+.kpi[role=button]{cursor:pointer}
+.kpi[role=button]:hover:not(.on){background:var(--fill2)}
+.kpi .v{margin-top:4px;font-size:24px;font-weight:600;letter-spacing:-.02em;color:var(--ink)}
+.kpi.on{background:var(--blue);color:#fff;box-shadow:0 6px 20px rgba(0,113,227,.24)}
+.kpi.on .muted{color:rgba(255,255,255,.86)}
+.kpi.on .v,.kpi.on .cx-v{color:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s3)}
+.row{display:flex;gap:var(--s2);align-items:center;flex-wrap:wrap}
+
+/* 폼: 라벨 위 · 입력 아래, 3열 그리드 */
+.np .lbl{margin:var(--s6) 0 var(--s3);font-size:17px;font-weight:600;color:var(--ink)}
+.np .lbl:first-of-type{margin-top:0}
+.fg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4)}
+.fg>div,.fg>label{display:flex;flex-direction:column;gap:6px;min-width:0}
+.fg small,.fg>label>span{font-size:12px;font-weight:600;color:var(--muted);letter-spacing:-.01em}
+.fg input{width:100%}
+.fg+.fg{margin-top:var(--s4)}
+input,select,textarea{font:inherit;font-size:17px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:11px 14px;transition:border-color .2s var(--ease),box-shadow .2s var(--ease)}
+input::placeholder,textarea::placeholder{color:var(--faint)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(0,113,227,.16)}
+input:disabled{background:var(--fill2);color:var(--muted)}
+textarea{width:100%;line-height:1.47}
+.actions,.np .act{display:flex;align-items:center;justify-content:space-between;gap:var(--s5);margin-top:var(--s6);padding-top:var(--s5);border-top:1px solid var(--hair)}
+.actions{justify-content:flex-end}.np .act p{margin:0;max-width:62ch}
+
+/* 버튼: 채움=흰 글자, 외곽=색 글자, 비활성=회색 */
+button{font:inherit;font-size:15px;font-weight:500;line-height:1;border:0;border-radius:var(--pill);padding:11px 20px;cursor:pointer;background:var(--blue);color:#fff;white-space:nowrap;transition:background .2s var(--ease),color .2s var(--ease),transform .12s var(--ease)}
+button:hover{background:var(--blue-h)}button:active{transform:scale(.97)}
+button.sec{background:transparent;color:var(--link);box-shadow:inset 0 0 0 1px var(--link)}button.sec:hover{background:var(--link);color:#fff}
+button.rec{background:var(--red);color:#fff;display:inline-flex;align-items:center;gap:var(--s2)}button.rec:hover{background:#c90000}
+button.rec .dot,button.rec .sq{width:9px;height:9px;background:currentColor;display:inline-block}button.rec .dot{border-radius:50%}button.rec .sq{border-radius:2px}
+button.rec.on{animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(227,0,0,.4)}50%{box-shadow:0 0 0 8px rgba(227,0,0,0)}}
+button.danger{background:var(--red)}button.danger:hover{background:#c90000}
+button.del{background:transparent;color:var(--red);padding:6px 12px;font-size:14px}button.del:hover{background:var(--red);color:#fff}
+button:disabled,button:disabled:hover{background:var(--fill);color:var(--faint);box-shadow:none;cursor:default;transform:none;animation:none}
+.np .act button{font-size:17px;padding:13px 26px}
+
+/* 세그먼트 탭·토픽: 선택=검정 바탕 흰 글자 */
+.tabs{display:flex;width:100%;gap:4px;padding:4px;margin:var(--s6) 0 var(--s5);background:var(--fill);border-radius:var(--pill)}
+.tabs button{flex:1 1 0;min-width:0}
+.tabs button,.topics button{background:transparent;color:var(--ink);font-size:14px;padding:9px 20px}
+.tabs button:hover:not(:disabled){background:rgba(255,255,255,.7)}
+.tabs button:disabled,.tabs button:disabled:hover{background:transparent;color:var(--faint);opacity:.65}
+.tabs button.on,.tabs button.on:hover{background:var(--ink);color:#fff}
+.topics{display:flex;gap:6px;flex-wrap:nowrap;margin:var(--s3) 0;width:100%}
+.topics button{flex:1 1 0;min-width:0;padding:0 10px;font-size:13px;letter-spacing:-.025em;box-shadow:inset 0 0 0 1px var(--line)}.topics button:hover{background:var(--fill2)}
+.topics button.on,.topics button.on:hover{background:var(--blue);color:#fff;box-shadow:0 4px 12px rgba(0,113,227,.22)}
+
+/* 표 */
+table{border-collapse:collapse;width:100%}
+th{font-size:12px;font-weight:600;color:var(--muted);text-align:left;padding:var(--s2) var(--s3);border-bottom:1px solid var(--line)}
+td{font-size:15px;padding:14px var(--s3);border-bottom:1px solid var(--hair);vertical-align:middle}
+tr:last-child td{border-bottom:0}
+
+/* 배지 */
+.pill{display:inline-block;padding:3px 10px;border-radius:var(--pill);background:var(--fill2);color:var(--ink2);font-size:12px;font-weight:500;margin-left:0}
+.pill.trk-new{background:var(--blue-t);color:var(--link)}.pill.trk-existing{background:var(--purple-t);color:var(--purple)}
+.must,.pill.must{background:var(--red-t);color:var(--red)}
+.banner{background:var(--orange-t);color:var(--ink);border-radius:var(--r);padding:var(--s3) var(--s4);font-size:14px}
+.err{color:var(--red);font-size:14px}.live{color:var(--faint);font-size:14px}
+
+/* 업로드·단계 */
+.drop{border:1.5px dashed var(--line);border-radius:var(--r);padding:var(--s6);text-align:center;color:var(--muted);transition:background .2s var(--ease),border-color .2s var(--ease)}
+.drop.drag{border-color:var(--blue);background:var(--blue-t)}
+.steps{display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--s3)}
+
+/* 위험 구역 */
+.card.danger{box-shadow:inset 0 0 0 1px var(--red-t),var(--shadow)}.card.danger h3{color:var(--red)}
+
+/* 고객 유형 선택 카드 */
+.trkc{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4)}
+.trkc input{position:absolute;opacity:0;pointer-events:none}
+.trkc label{position:relative;display:flex;gap:var(--s4);align-items:flex-start;padding:var(--s5);border-radius:var(--r-lg);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);cursor:pointer;transition:background .35s var(--ease),box-shadow .35s var(--ease),opacity .35s var(--ease)}
+.trkc label:hover{box-shadow:inset 0 0 0 1px var(--faint)}
+.trkc .ic svg{width:28px;height:28px;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke .35s var(--ease)}
+.trkc .t-new .ic svg{stroke:var(--blue)}.trkc .t-ex .ic svg{stroke:var(--purple)}
+.trkc .tx b{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:var(--s1);transition:color .35s var(--ease)}
+.trkc .tx span{font-size:17px;font-weight:600;line-height:1.41;color:var(--ink)}
+.trkc em{font-style:normal}.c-blue{color:var(--blue)}.c-purple{color:var(--purple)}
+.trkc .chk{margin-left:auto;flex:none;width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--line);position:relative;transition:background .3s var(--ease),box-shadow .3s var(--ease)}
+.trkc .chk::after{content:"";position:absolute;left:8px;top:4px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) scale(0);transition:transform .3s var(--ease)}
+.trkc label:has(input:checked) .chk::after{transform:rotate(45deg) scale(1)}
+.trkc .t-new:has(input:checked){background:var(--blue);box-shadow:none}
+.trkc .t-ex:has(input:checked){background:var(--purple);box-shadow:none}
+.trkc label:has(input:checked) .tx b,.trkc label:has(input:checked) .tx span,.trkc label:has(input:checked) em{color:#fff}
+.trkc label:has(input:checked) .tx b{opacity:.8}
+.trkc label:has(input:checked) .ic svg{stroke:#fff}
+.trkc label:has(input:checked) .chk{background:#fff;box-shadow:none}
+.trkc .t-new:has(input:checked) .chk::after{border-color:var(--blue)}.trkc .t-ex:has(input:checked) .chk::after{border-color:var(--purple)}
+.trkc:has(input:checked) label:not(:has(input:checked)){opacity:.55}
+
+@media (max-width:760px){.fg,.trkc,.grid{grid-template-columns:1fr}.hero h1{font-size:28px}header nav{gap:20px}.card{padding:var(--s5)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* 버튼 글자 정중앙: 고정 높이 + flex 정렬(한글 글꼴 기준선 차이 흡수) */
+button{display:inline-flex;align-items:center;justify-content:center;gap:var(--s2);height:40px;padding:0 20px;line-height:1.2;vertical-align:middle}
+.np .act button{height:48px;padding:0 26px}
+.tabs button{height:34px;padding:0 18px}
+.topics button{height:34px;padding:0 10px}
+button.del,a.open{height:30px;padding:0 12px;font-size:14px}
+a.open{display:inline-flex;align-items:center;justify-content:center;border-radius:var(--pill);color:var(--link);font-weight:500;line-height:1.2;vertical-align:middle;transition:background .2s var(--ease),color .2s var(--ease)}
+a.open:hover{background:var(--link);color:#fff;text-decoration:none}
+td.acts{white-space:nowrap;text-align:right}td.acts>*+*{margin-left:var(--s1)}
+/* Cost Optimization 탭 (static/cost.js) — 기존 토큰만 사용 */
+.cx-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s5);margin-top:var(--s5)}.cx-grid>.card{margin:0}
+.cx-svg{width:100%;height:auto;display:block}.cx-donut{width:180px;height:180px;flex:none}
+.cx-row{display:flex;gap:var(--s5);align-items:center}.cx-tbl td:first-child{white-space:nowrap}.cx-tbl td{padding:6px var(--s2);font-size:13px}.cx-tbl td.r{white-space:nowrap}.cx-tbl .r{text-align:right}
+.cx-leg{display:flex;gap:var(--s4);flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:var(--s2)}.cx-leg i,.cx-dot{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.cx-v{font-size:24px;font-weight:600;color:var(--ink);letter-spacing:-.02em}.cx-na{color:var(--orange);font-size:14px}
+.cx-tip{color:var(--link);cursor:help;font-size:13px;margin-left:2px}details.card>summary{cursor:pointer}
+@media (max-width:760px){.cx-grid{grid-template-columns:1fr}.cx-row{flex-direction:column}}
+</style></head><body>
+<header><div class="hdr"><a href="/" class="logo" title="AI Assessment"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#1d1d1f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8.66 5v10L12 22l-8.66-5V7z"/><circle cx="12" cy="12" r="3"/></svg></a><nav><a href="/">프로젝트</a><a href="/admin" id="nav-admin" style="display:none">사용자 관리</a><a href="/admin/deleted" id="nav-deleted" style="display:none">삭제된 프로젝트</a></nav>
+<span class="me" id="me"></span></div></header>
+<main id="app">불러오는 중…</main>
+<script src="/static/cost.js?v=20261022b"></script>
+<script src="/static/arch.js?v=20261022b"></script>
+<script src="/static/asis.js?v=06f2510bd654d557"></script>
+<script src="/static/assessment-workflow.js?v=20261022d"></script>
+<script>
+const $=s=>document.querySelector(s);const api=async(u,o={})=>{o.headers=Object.assign({'Content-Type':'application/json'},o.headers||{});const r=await fetch(u,o);if(r.status===401){location='/login?next='+encodeURIComponent(location.pathname);return}if(!r.ok)throw new Error(await r.text());return r.headers.get('content-type')?.includes('json')?r.json():r};
+const esc=s=>(s??'').toString().replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let Q=[],TRK={},ME=null,STATE=null,curTopic=null,curArea='A',TAB='infra',INFRA=null;
+async function boot(){ME=await api('/api/aicaf/me');$('#me').innerHTML=`${esc(ME.name)} · <a href="/password">비밀번호 변경</a> · <a href="/logout">로그아웃</a>`;if(ME.is_admin){$('#nav-admin').style.display='';$('#nav-deleted').style.display=''}TRK=await api('/api/aicaf/tracks');route()}
+function route(){const p=location.pathname;if(p.startsWith('/interview/'))return interview(+p.split('/')[2]);if(p==='/infra')return infra();if(p==='/admin')return admin();if(p==='/admin/deleted')return deletedProjects();return home()}
+function badge(t){const m=TRK[t];return m?`<span class="pill trk-${t}" title="${esc(m.desc)}">${esc(m.label)}</span>`:''}
+const ROLE_KO={manager:'프로젝트 관리자',interviewer:'인터뷰어',viewer:'조회만'};
+async function home(){const list=await api('/api/aicaf/assessments');
+const form=ME.can_create?`<div class="card np"><h2><b>새 프로젝트.</b> 고객 유형부터 선택하세요.</h2>
+<div class="lbl">1. 고객 유형 <span class="hint">생성 후에는 바꿀 수 없습니다</span></div>
+<div class="trkc" id="trk"><label class="t-new"><input type="radio" name="trk" value="new"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><rect x="8" y="8" width="8" height="8" rx="2"/></svg></span><div class="tx"><b>신규구축</b><span>AI를 아직 쓰지 않는 고객. <em class="c-blue">도입 준비도와 랜딩존 설계</em>를 중심으로.</span></div><i class="chk"></i></label><label class="t-ex"><input type="radio" name="trk" value="existing"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></svg></span><div class="tx"><b>기구축</b><span>AI를 이미 쓰는 고객. <em class="c-purple">운영·비용·거버넌스 최적화</em>를 중심으로.</span></div><i class="chk"></i></label></div>
+<div class="lbl">2. 프로젝트 정보</div>
+<div class="fg"><div><small>고객명 *</small><input id="cu" placeholder="예: LGE"></div><div><small>프로젝트명</small><input id="ti" placeholder="예: ThinQ 분석"></div><div><small>대표 인터뷰어</small><input id="iv" value="${esc(ME.name)}"></div></div>
+<div class="lbl">3. 고객측 보고 담당자 <span class="muted" style="font-weight:400">(선택)</span></div>
+<div class="fg"><div><small>이름</small><input id="cn" placeholder="홍길동"></div><div><small>직책</small><input id="cr" placeholder="IT 팀장"></div><div><small>이메일</small><input id="ce" placeholder="name@company.com"></div></div>
+<div class="act"><p class="muted" style="margin:0">고객 유형에 따라 인터뷰 문항·채점·보고서가 달라집니다. 만든 사람이 프로젝트 관리자가 되며, 프로젝트 안에서 동료와 권한(관리자·인터뷰어·조회만)을 추가할 수 있습니다.</p><button onclick="create()">프로젝트 만들기</button></div></div>`
+:`<div class="card muted">프로젝트 관리자가 추가해 준 프로젝트만 보입니다. 새 프로젝트를 만들려면 관리자에게 '프로젝트 관리자' 권한을 요청하세요.</div>`;
+const qx=`<div class="card row"><b>인터뷰 질문지(엑셀)</b><span class="muted">현장 기록용 빈 양식</span>${Object.entries(TRK).map(([k,m])=>`<a href="/api/aicaf/questionnaire/${k}.xlsx"><button class="sec">${esc(m.label)} 질문지 받기</button></a>`).join('')}</div>`;
+$('#app').innerHTML=`<section class="hero"><h1><b>AI Assessment.</b> 정확한 진단에서 시작하는 AI 도입.</h1></section>`+form+qx+`<div class="card"><h2><b>프로젝트.</b> 참여 중인 진단 목록.</h2><table><tr><th>번호</th><th>유형</th><th>고객</th><th>프로젝트</th><th>내 역할</th><th>멤버</th><th>인프라 분석</th><th>생성</th><th></th></tr>${list.map(a=>`<tr><td>${a.id}</td><td>${badge(a.track)}</td><td>${esc(a.customer)}</td><td>${esc(a.title)}</td><td><span class="pill">${ROLE_KO[a.my_role]||'-'}</span></td><td class="muted">${a.members}명</td><td class="muted">${a.infra_case_id?'준비됨':'-'}</td><td class="muted">${new Date(a.created*1000).toLocaleString()}</td><td class="acts"><a class="open" href="/interview/${a.id}">열기</a>${a.my_role==='manager'?`<button class="del" onclick="listDelete(${a.id},'${esc(a.customer).replace(/'/g,'')}')">삭제</button>`:''}</td></tr>`).join('')||'<tr><td colspan=9 class="muted">참여 중인 프로젝트가 없습니다.</td></tr>'}</table></div>`}
+async function create(){const t=document.querySelector('input[name=trk]:checked');if(!t)return alert('고객 유형(신규구축·기구축)을 선택하세요');const c=$('#cu').value.trim();if(!c)return alert('고객명을 입력하세요');try{const r=await api('/api/aicaf/assessments',{method:'POST',body:JSON.stringify({track:t.value,customer:c,title:$('#ti').value,interviewer:$('#iv').value,contact_name:$('#cn').value,contact_role:$('#cr').value,contact_email:$('#ce').value})});if(r.infra_error)alert('인프라 분석 준비 실패: '+r.infra_error);location='/interview/'+r.id}catch(e){alert(e.message)}}
+function infra(){location.href='/'}
+async function load(aid){INFRA=await api(`/api/aicaf/assessments/${aid}/infra`).catch(()=>null);STATE=await api('/api/aicaf/assessments/'+aid);const wf=STATE.workflow||{};if(!wf.questionnaire_ready){Q=[];Q._aid=aid;Q._basis=null;curTopic=null}else if(Q._aid!==aid||Q._basis!==wf.questionnaire_sha256){Q=await api('/api/aicaf/questions?aid='+aid);Q._aid=aid;Q._basis=wf.questionnaire_sha256;curArea='A';curTopic=null}STATE.recs=await api(`/api/aicaf/assessments/${aid}/recordings`);STATE.voice=await api('/api/aicaf/voiceprint').catch(()=>({enrolled:false}));STATE.members=await api(`/api/aicaf/assessments/${aid}/members`).catch(()=>[]);STATE.dir=STATE.my_role==='manager'?await api('/api/aicaf/users').catch(()=>[]):[]}
+async function interview(aid){if(!COST||COST._aid!==aid)COST=null;try{await load(aid)}catch(e){$('#app').innerHTML=`<div class="card"><h3>프로젝트를 불러오지 못했습니다</h3><p class="muted">${esc(e.message)}</p><a href="/">프로젝트 목록으로</a></div>`;return}if(!curTopic)curTopic=Q.find(q=>q.area===curArea)?.topic||null;const q=new URLSearchParams(location.search);const qt=q.get('tab'),qs=q.get('arch_state');if(qs==='AS-IS'||qs==='TO-BE')ARCH_SUB=qs;const step=STATE.workflow?.current_step;if(qt&&window.AssessmentFlow.canOpen(STATE.workflow,qt))TAB=qt;else if(step==='interview')TAB='interview';else if(step==='integrated'||step==='complete')TAB='integrated';else TAB='infra';render(aid)}
+function pickArea(aid,k){curArea=k;curTopic=Q.find(q=>q.area===k)?.topic||null;render(aid)}
+function selectFlowTab(aid,tab){if(!window.AssessmentFlow.canOpen(STATE.workflow,tab))return;TAB=tab;render(aid)}
+function tabs(aid){const wf=STATE.workflow;const buttons=[['infra','1. 현황 분석'],['interview','2. 인터뷰'],['arch','3. 아키텍처'],['cost','4. 비용 분석'],['integrated','5. Summary Report'],['team','프로젝트·멤버']];return `<div class="tabs">${buttons.map(([key,label])=>`<button class="${TAB===key?'on':''}" ${window.AssessmentFlow.canOpen(wf,key)?'':'disabled'} onclick="selectFlowTab(${aid},'${key}')">${label}</button>`).join('')}</div>`}
+function workflowBanner(aid){return ''}
+function flowView(aid,kind){return `<div id="flow-root-${kind}" data-aid="${aid}"><div class="card muted">공통 보고서 원장을 확인 중입니다.</div></div>`}
+function lockedInterview(aid){return `<div class="card"><h3>현황분석을 먼저 완료해야 합니다</h3><p class="muted">AS-IS 현황분석 보고서의 내용·실렌더 검토 후 공식 지침과 그 현황에 연결된 질문으로 인터뷰를 진행합니다. 기존 답변·녹음은 보존됩니다.</p><button onclick="selectFlowTab(${aid},'infra')">현황분석으로 이동</button></div>`}
+async function flowTransition(aid,next){if(STATE?.assessment?.id!==aid)return;const changed=STATE.workflow?.questionnaire_sha256!==next.questionnaire_sha256;STATE.workflow=next;if(changed||next.current_step==='complete'){await load(aid);if(!curTopic)curTopic=Q.find(q=>q.area===curArea)?.topic||null;render(aid)}}
+function mountFlow(aid,kind){const element=document.getElementById('flow-root-'+kind);if(element)window.AssessmentFlow.mount(aid,kind,element,{canEdit:canDo('interviewer'),state:STATE.workflow,onTransition:next=>flowTransition(aid,next)})}
+function canDo(min){const r={viewer:1,interviewer:2,manager:3};return (r[STATE&&STATE.my_role]||0)>=r[min]}
+function teamView(aid){const a=STATE.assessment,M=STATE.members||[],mgr=canDo('manager');const dis=mgr?'':'disabled';
+const f=(k,l)=>`<label><span>${l}</span><input id="pf-${k}" value="${esc(a[k]||'')}" ${dis}></label>`;
+return `<div class="card"><h3>고객·프로젝트 정보</h3><div class="fg">${f('customer','고객명')}${f('title','프로젝트명')}${f('interviewer','대표 인터뷰어')}</div><div class="fg">${f('contact_name','보고 담당자')}${f('contact_role','직책')}${f('contact_email','이메일')}</div>
+${mgr?`<div class="actions"><button onclick="saveProject(${aid})">변경 사항 저장</button></div>`:'<p class="muted">프로젝트 관리자만 수정할 수 있습니다.</p>'}</div>
+<div class="card"><h3>멤버 (${M.length}명)</h3><table><tr><th>이름</th><th>아이디</th><th>역할</th><th>추가</th><th></th></tr>${M.map(m=>`<tr><td>${esc(m.display_name||m.username)}</td><td class="muted">${esc(m.username)}</td>
+<td>${mgr?`<select onchange="setMember(${aid},'${esc(m.username)}',this.value)">${Object.entries(ROLE_KO).map(([k,v])=>`<option value="${k}" ${k===m.role?'selected':''}>${v}</option>`).join('')}</select>`:ROLE_KO[m.role]}</td>
+<td class="muted">${m.added?new Date(m.added*1000).toLocaleDateString():''}</td><td>${mgr?`<a href="#" onclick="delMember(${aid},'${esc(m.username)}');return false">빼기</a>`:''}</td></tr>`).join('')}</table>
+${mgr?`<div class="row" style="margin-top:10px"><select id="nm-user"><option value="">— 사용자 선택 —</option>${(STATE.dir||[]).filter(u=>!M.some(m=>m.username===u.username)).map(u=>`<option value="${esc(u.username)}">${esc(u.display_name)} (${esc(u.username)})</option>`).join('')}</select>
+<select id="nm-role">${Object.entries(ROLE_KO).map(([k,v])=>`<option value="${k}" ${k==='interviewer'?'selected':''}>${v}</option>`).join('')}</select><button onclick="addMember(${aid})">멤버 추가</button></div>
+<p class="muted">프로젝트 관리자: 고객 정보·멤버 관리와 모든 작업 · 인터뷰어: 인터뷰 녹음·점수, 인프라 분석 실행 · 조회만: 결과 보기·보고서 받기. 승인된 계정만 추가할 수 있습니다.</p>`:''}</div>
+${mgr?`<div class="card danger" id="danger"><h3>위험 구역 — 프로젝트 삭제</h3><p class="muted">삭제하면 프로젝트 목록과 화면에서 사라집니다. 답변·녹음·인프라 분석 파일은 지우지 않고 보관하며, 시스템 관리자가 '삭제된 프로젝트'에서 복원할 수 있습니다. 녹음 중이거나 인프라 분석이 실행 중이면 삭제할 수 없습니다.</p>
+<div class="row"><span>확인을 위해 고객명 <b>${esc(a.customer)}</b> 을(를) 그대로 입력하세요</span><input id="del-confirm" style="width:220px" oninput="$('#del-btn').disabled=this.value!==STATE.assessment.customer"><button id="del-btn" class="danger" disabled onclick="deleteProject(${aid})">프로젝트 삭제</button></div></div>`:''}`}
+async function listDelete(aid,cu){const v=prompt(`프로젝트 #${aid}를 삭제(보관)합니다.\n답변·녹음·인프라 파일은 보존되며 시스템 관리자가 복원할 수 있습니다.\n\n확인을 위해 고객명 "${cu}"을(를) 그대로 입력하세요.`);if(v===null)return;try{await api(`/api/aicaf/assessments/${aid}`,{method:'DELETE',body:JSON.stringify({confirm:v.trim()})});home()}catch(e){alert(e.message)}}
+async function deleteProject(aid){const v=$('#del-confirm').value;if(v!==STATE.assessment.customer)return;try{await api(`/api/aicaf/assessments/${aid}`,{method:'DELETE',body:JSON.stringify({confirm:v})});alert('프로젝트를 삭제(보관)했습니다.');location='/'}catch(e){alert(e.message)}}
+async function saveProject(aid){const b={};['customer','title','interviewer','contact_name','contact_role','contact_email'].forEach(k=>b[k]=$('#pf-'+k).value);try{await api(`/api/aicaf/assessments/${aid}`,{method:'PUT',body:JSON.stringify(b)});await load(aid);render(aid)}catch(e){alert(e.message)}}
+async function addMember(aid){const u=$('#nm-user').value;if(!u)return alert('사용자를 고르세요');await setMember(aid,u,$('#nm-role').value)}
+async function setMember(aid,u,role){try{await api(`/api/aicaf/assessments/${aid}/members`,{method:'PUT',body:JSON.stringify({username:u,role})})}catch(e){alert(e.message)}await load(aid);render(aid)}
+async function delMember(aid,u){if(!confirm(u+' 님을 프로젝트에서 뺄까요?'))return;try{await api(`/api/aicaf/assessments/${aid}/members/${encodeURIComponent(u)}`,{method:'DELETE'})}catch(e){alert(e.message)}await load(aid);render(aid)}
+async function deletedProjects(){if(!ME.is_admin){$('#app').innerHTML='<div class="card">관리자만 볼 수 있습니다.</div>';return}const L=await api('/api/aicaf/admin/deleted-projects');
+$('#app').innerHTML=`<div class="card"><h2>삭제된 프로젝트</h2><p class="muted">삭제는 보관입니다. 답변·녹음·인프라 파일이 그대로 남아 있어 복원하면 삭제 전 상태로 돌아갑니다.</p><table><tr><th>번호</th><th>유형</th><th>고객</th><th>프로젝트</th><th>답변</th><th>삭제한 사람</th><th>삭제 시각</th><th></th></tr>${L.map(a=>`<tr><td>${a.id}</td><td>${badge(a.track)}</td><td>${esc(a.customer)}</td><td>${esc(a.title||'')}</td><td class="muted">${a.answers}</td><td class="muted">${esc(a.deleted_by||'')}</td><td class="muted">${new Date(a.deleted_at*1000).toLocaleString()}</td><td><button class="sec" onclick="restoreProject(${a.id},'${esc(a.customer)}')">복원</button></td></tr>`).join('')||'<tr><td colspan=8 class="muted">삭제된 프로젝트가 없습니다.</td></tr>'}</table></div>`}
+async function restoreProject(id,name){if(!confirm(name+' 프로젝트를 복원할까요?'))return;try{await api(`/api/aicaf/admin/deleted-projects/${id}/restore`,{method:'POST'});deletedProjects()}catch(e){alert(e.message)}}
+const STATUS_KO={pending:'승인 대기',active:'사용 중',rejected:'거절',disabled:'중지'};
+async function admin(){if(!ME.is_admin){$('#app').innerHTML='<div class="card">관리자만 볼 수 있습니다.</div>';return}const U=await api('/api/aicaf/admin/users');const pend=U.filter(u=>u.status==='pending').length;
+$('#app').innerHTML=`<div class="card"><h2>사용자 관리</h2><p class="muted">회원가입 신청을 승인해야 로그인할 수 있습니다. 승인 대기 <b>${pend}</b>명.</p>
+<table><tr><th>이름</th><th>아이디</th><th>이메일</th><th>가입 사유</th><th>상태</th><th>시스템 권한</th><th>프로젝트</th><th>신청</th><th></th></tr>${U.map(u=>{const me=u.username===ME.upn;return `<tr><td>${esc(u.display_name)}</td><td class="muted">${esc(u.username)}</td><td class="muted">${esc(u.email||'')}</td><td class="muted">${esc(u.requested_note||'')}</td>
+<td><span class="pill">${STATUS_KO[u.status]||u.status}</span></td>
+<td><select ${me?'disabled':''} onchange="admUser('${esc(u.username)}',{role:this.value})">${Object.entries(ME.sys_roles).map(([k,v])=>`<option value="${k}" ${u.roles.includes(k)?'selected':''}>${v}</option>`).join('')}</select></td>
+<td class="muted">${u.projects}</td><td class="muted">${new Date(u.created*1000).toLocaleDateString()}</td>
+<td>${me?'<span class="muted">본인</span>':u.status==='pending'?`<button onclick="admUser('${esc(u.username)}',{status:'active'})">승인</button> <button class="sec" onclick="admUser('${esc(u.username)}',{status:'rejected'})">거절</button>`:u.status==='active'?`<button class="sec" onclick="if(confirm('사용을 중지할까요?'))admUser('${esc(u.username)}',{status:'disabled'})">중지</button>`:`<button class="sec" onclick="admUser('${esc(u.username)}',{status:'active'})">사용 재개</button>`}</td></tr>`}).join('')}</table>
+<p class="muted">관리자: 가입 승인·권한 부여, 모든 프로젝트 관리 · 프로젝트 관리자: 새 프로젝트 만들기 · 일반 사용자: 추가된 프로젝트만 참여.</p></div>`}
+async function admUser(u,body){try{await api(`/api/aicaf/admin/users/${encodeURIComponent(u)}`,{method:'PUT',body:JSON.stringify(body)})}catch(e){alert(e.message)}admin()}
+function fmtB(n){return n>1048576?(n/1048576).toFixed(1)+'MB':(n/1024).toFixed(0)+'KB'}
+const STEP_KO={ok:'완료',reused:'기존 결과 사용',running:'진행 중',failed:'실패',missing:'파일 없음',empty:'자료 없음',skipped:'건너뜀',partial:'일부 완료',drift:'주의'};
+function curStepText(I){const s=I.steps.find(x=>x.status==='running');return s?`지금: ${s.label}${s.detail?' ('+s.detail+')':''}`:'다음 단계 준비 중'}
+const STEP_CLS={ok:'ok',reused:'ok',running:'run',failed:'bad',missing:'bad',empty:'warn',skipped:'warn',partial:'warn',drift:'warn'};
+function infraView(aid){const I=INFRA;if(!I)return `<div class="card">인프라 분석 정보를 불러오지 못했습니다.</div>`;
+const can=I.has_warafile&&!I.running;const st={empty:'수집 파일 없음',ready:'분석 준비됨',running:'분석 중',done:'완료',failed:'실패'}[I.status]||I.status;
+return `<div class="card"><h3>1. 수집</h3><p class="muted">고객 Azure 구독에서 수집 스크립트를 실행하면 <b>WARA-File-*.json</b>과 <b>topology.json</b>이 만들어집니다.</p>
+<a href="/api/aicaf/collector"><button class="sec">수집 스크립트 받기 (Collect-InfraEvidence.ps1)</button></a><a href="/api/aicaf/guides/design-xlsx"><button class="sec">디자인 원칙 (엑셀)</button></a><a href="/api/aicaf/guides/design-pptx"><button class="sec">디자인 원칙 (PPT)</button></a>
+${canDo('interviewer')?`<div style="margin-top:12px;padding-top:12px;border-top:1px solid #e5e7eb"><b>업로드 key 발급</b> <span class="muted">— 스크립트 실행 직전에 발급하세요. 10분 동안 한 번만 쓸 수 있고, 이 프로젝트로만 올라갑니다.</span>
+<div class="row" style="margin-top:6px"><input id="ck-sub" placeholder="수집할 구독 ID (00000000-0000-0000-0000-000000000000)" style="flex:1;font-family:ui-monospace,monospace" autocomplete="off" spellcheck="false"><button onclick="issueKey(${aid})">업로드 key 발급</button></div>
+<div id="ck-out" class="muted" style="margin-top:6px"></div><div id="cu-state">${collectorState()}</div>
+<p class="muted" style="margin:6px 0 0">스크립트 실행 → 수집이 끝나면 <b>WARA upload capability</b> 를 물어봅니다 → 이 key 를 붙여넣으면 아래 2번에 파일이 자동으로 올라옵니다.</p></div>`:''}</div>
+<div class="card"><h3>2. 결과 파일 올리기 <span class="muted" style="font-size:14px;font-weight:normal">(Optional - 수동 파일 올리기)</span></h3><div id="dz" class="drop">여기로 파일을 끌어다 놓거나 <label style="color:var(--teal);cursor:pointer;text-decoration:underline">선택<input id="fi" type="file" multiple accept=".json,.xlsx,.pptx,.csv" style="display:none" onchange="upInfra(${aid},this.files)"></label></div>
+<div id="upmsg" class="muted"></div>
+<table style="margin-top:8px">${I.source.map(f=>`<tr><td>${esc(f.name)}</td><td class="muted">${fmtB(f.bytes)}</td><td class="muted">${new Date(f.modified*1000).toLocaleString()}</td><td>원본 보존</td></tr>`).join('')||'<tr><td class="muted">아직 올린 파일이 없습니다.</td></tr>'}</table>
+<p class="muted">WARA-File ${I.has_warafile?'✅':'❌'} · topology ${I.has_topology?'✅':'⬜ (선택)'}</p></div>
+<div id="infra34">${infra34(aid)}</div>`}
+function collectorState(){const C=(INFRA&&INFRA.collector)||{};const now=Date.now()/1000;
+if(C.waiting_since&&now<C.expires_at)return `<div class="banner" style="margin:8px 0 0">⏳ <b>업로드 대기 중</b> — key 발급 ${new Date(C.waiting_since*1000).toLocaleTimeString()} · 만료 ${new Date(C.expires_at*1000).toLocaleTimeString()}. 스크립트가 올리면 여기에 바로 표시됩니다(10초마다 확인).</div>`;
+if(C.uploaded_at)return `<div class="banner" style="margin:8px 0 0;border-color:var(--teal);background:#ecfdf5">✅ <b>수집 스크립트 업로드 완료</b> — ${new Date(C.uploaded_at*1000).toLocaleString()} · ${(C.files||[]).map(esc).join(', ')} · 아래 3번에서 분석을 시작하세요.</div>`;
+if(C.waiting_since)return `<div class="muted" style="margin-top:6px">발급한 key 가 만료되었습니다(업로드 없음). 다시 발급해 주세요.</div>`;return ''}
+function infra34(aid){return flowView(aid,'current_state')}
+async function issueKey(aid){const sub=($('#ck-sub').value||'').trim().toLowerCase();const o=$('#ck-out');
+if(!/^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$/.test(sub)){o.innerHTML='<span class="err">구독 ID 형식이 아닙니다.</span>';return}
+try{const b=await api(`/api/aicaf/assessments/${aid}/infra/upload-key`,{method:'POST',body:JSON.stringify({subscriptionId:sub})});
+o.innerHTML=`<div class="banner" style="margin:0"><b>업로드 key — 지금 복사하세요. 다시 표시되지 않습니다.</b><div class="row" style="margin-top:6px"><code id="ck-key" style="flex:1;word-break:break-all;font-size:13px">${esc(b.key)}</code><button class="sec" onclick="navigator.clipboard.writeText($('#ck-key').textContent);this.textContent='복사됨'">복사</button></div><div class="muted" style="margin-top:4px">만료 ${new Date(b.expiresAt*1000).toLocaleTimeString()} · 1회용</div></div>`;refresh34(aid)}catch(e){o.innerHTML='<span class="err">'+esc(e.message)+'</span>'}}
+async function upInfra(aid,files){if(!files||!files.length)return;const f=new FormData();[...files].forEach(x=>f.append('files',x));$('#upmsg').textContent='올리는 중…';
+const r=await fetch(`/api/aicaf/assessments/${aid}/infra/upload`,{method:'POST',body:f});if(!r.ok){$('#upmsg').textContent='실패: '+await r.text();return}await load(aid);render(aid)}
+async function delInfra(aid,n){if(!confirm('삭제할까요?'))return;await fetch(`/api/aicaf/assessments/${aid}/infra/source/${n}`,{method:'DELETE'});await load(aid);render(aid)}
+async function startInfra(aid){return mountFlow(aid,'current_state')}
+function paint34(aid){const el=$('#infra34');if(!el)return;const root=el.querySelector('#flow-root-current_state');if(!root||root.dataset.aid!==String(aid))el.innerHTML=infra34(aid);mountFlow(aid,'current_state')}
+async function refresh34(aid){try{const prev=(INFRA&&INFRA.collector&&INFRA.collector.uploaded_at)||null;INFRA=await api(`/api/aicaf/assessments/${aid}/infra`);
+// 처음 그릴 때 이미 있던 업로드는 알림하지 않는다(INFRA 는 load() 에서 먼저 채워지므로 prev 가 같다).
+const cs=$('#cu-state');if(cs)cs.innerHTML=collectorState();
+if(INFRA.collector&&INFRA.collector.uploaded_at&&INFRA.collector.uploaded_at!==prev){render(aid);toast('✅ 수집 스크립트 업로드 완료 — 파일 '+(INFRA.collector.files||[]).length+'개가 등록되었습니다.');return}
+paint34(aid)}catch(e){}}
+function toast(t){const d=document.createElement('div');d.textContent=t;d.style.cssText='position:fixed;right:20px;bottom:20px;background:#065f46;color:#fff;padding:12px 16px;border-radius:8px;z-index:99;box-shadow:0 4px 12px #0003';document.body.appendChild(d);setTimeout(()=>d.remove(),8000)}
+// 인프라 탭이 열려 있는 동안 10초마다 3·4번만 다시 그린다(1·2번 입력은 건드리지 않음)
+let PT=null;function pollInfra(aid){clearTimeout(PT);PT=setTimeout(async()=>{if(TAB!=='infra')return;await refresh34(aid);pollInfra(aid)},10000)}
+function bindDrop(aid){const dz=document.getElementById('dz');if(!dz)return;['dragenter','dragover'].forEach(e=>dz.addEventListener(e,x=>{x.preventDefault();dz.classList.add('drag')}));['dragleave','drop'].forEach(e=>dz.addEventListener(e,x=>{x.preventDefault();dz.classList.remove('drag')}));dz.addEventListener('drop',e=>upInfra(aid,e.dataTransfer.files))}
+function render(aid){if(TAB!=='cost'&&window.CostFinops)window.CostFinops.unmount();if(window.AsisUI)window.AsisUI.unmount();window.AssessmentFlow.unmount();_render(aid);if(TAB==='infra'){bindDrop(aid);mountFlow(aid,'current_state');if(INFRA)pollInfra(aid)}else if(TAB==='integrated'){mountFlow(aid,'integrated')}else if(TAB==='interview'&&STATE.workflow?.questionnaire_ready){mountFlow(aid,'interview')}}
+function _render(aid){const a=STATE.assessment,c=STATE.consent,r=STATE.result;const topics=[...new Map(Q.map(q=>[q.topic,q])).values()];
+const v=STATE.voice||{};const voiceHtml=v.enrolled?`<span class="pill">① 인터뷰어 목소리 등록 완료 · ${esc(ME.name)} <a href="#" onclick="voiceReset(${aid});return false" style="margin-left:6px">다시 등록</a></span>`:
+`<div class="banner"><b>① 인터뷰어 목소리 등록</b> — 인터뷰하는 사람의 목소리를 먼저 등록해야 고객 말과 구분해 요약할 수 있습니다. 조용한 곳에서 아래 문장을 하나씩 소리 내어 읽어 주세요. 목소리 원본은 저장하지 않고 특징값만 저장합니다.
+<div id="vp-list" style="margin:8px 0">${VOICE_LINES.map((t,i)=>`<div class="row" style="margin:4px 0"><button id="vp-b-${i}" class="sec" onclick="voiceSample(${aid},${i})">● 읽기 ${i+1}</button><span id="vp-s-${i}" style="flex:1">“${esc(t)}”</span></div>`).join('')}</div>
+<div class="row"><button id="vp-commit" onclick="voiceCommit(${aid})" disabled>목소리 등록 완료</button><span class="muted" id="vp-msg">문장 ${VOICE_LINES.length}개 중 ${v.pending||0}개 읽음</span></div></div>`;
+const step2=v.enrolled?'':'disabled title="① 목소리 등록을 먼저 해 주세요"';
+const consentHtml=c&&c.consent?`<span class="pill">② 녹음 동의 확인 · ${esc(c.confirmed_by)} · ${new Date(c.confirmed_at*1000).toLocaleString()}</span>`:
+`<div class="banner"><b>② 고객 녹음 동의</b> — 녹음 전에 고객에게 직접 물어보세요: “인터뷰 내용을 정확히 기록하기 위해 녹음하고 받아쓰기해도 될까요? 녹음은 이 진단 보고서 작성에만 사용합니다.”<div class="row" style="margin-top:8px"><button onclick="consent(${aid},true)" ${step2}>고객이 동의함</button><button class="sec" onclick="consent(${aid},false)">동의하지 않음(수기 진행)</button></div></div>`;
+const area=k=>r.areas[k]??'-';
+$('#app').innerHTML=`<div class="card"><div class="row"><h2 style="margin:0">${esc(a.customer)}</h2>${badge(a.track)}<span class="muted">${esc(a.title)} · 인터뷰어 ${esc(a.interviewer)}</span><span class="pill">${ROLE_KO[STATE.my_role]||''}</span><span style="margin-left:auto"></span></div></div>${tabs(aid)}${workflowBanner(aid)}${TAB==='team'?teamView(aid):TAB==='infra'?infraView(aid):TAB==='integrated'?flowView(aid,'integrated'):TAB==='cost'?costView(aid):TAB==='arch'?archView(aid):TAB==='interview'&&!STATE.workflow?.questionnaire_ready?lockedInterview(aid):`<div class="card"><h3 style="margin-top:0">인터뷰 준비</h3><div style="margin-bottom:8px">${voiceHtml}</div>${consentHtml}${v.enrolled&&c&&c.consent?'<div class="muted" style="margin-top:6px">준비 완료 — 질문별 녹음을 시작할 수 있습니다.</div>':'<div class="muted" style="margin-top:6px">①·② 둘 다 끝나야 녹음 버튼이 켜집니다.</div>'}</div>
+<div class="grid">${Object.entries((TRK[a.track]||{}).areas||{}).map(([k,n])=>[k,`${k}. ${esc((Q.find(q=>q.area===k)||{}).display_area_name||n)}`]).map(([k,n])=>`<div class="kpi${k===curArea?' on':''}" role="button" tabindex="0" onclick="pickArea(${aid},'${k}')"><div class="muted">${n}</div><div class="v">${area(k)}</div></div>`).join('')}</div>
+<div class="card" style="margin-top:12px"><div class="row"><span>종합 점수 <b class="score">${r.overall??'-'}</b></span><span>성숙도 <b class="score" style="color:var(--teal)">${r.stage??'-'}</b></span><span class="muted">${esc(r.reason)} · 응답 ${r.answered}/${r.total} · 미확인 ${(r.unknown_ratio*100).toFixed(0)}% · 필수 1점 이하 ${r.must_low}</span></div></div>
+<div class="topics">${topics.filter(t=>t.area===curArea).map(t=>`<button class="${t.topic===curTopic?'on':''}" onclick="curTopic='${t.topic}';render(${aid})">${t.topic} ${esc(t.display_topic_name||t.topic_name)} <small>${r.topics[t.topic]?.score??''}</small></button>`).join('')}</div>
+${Q.filter(q=>q.topic===curTopic).map(q=>qcard(aid,q)).join('')}${flowView(aid,'interview')}`}`}
+// 문항의 보조 정보는 질문은행에서 읽고, 모든 표시값을 이스케이프한다.
+function qguide(q){
+const guides=(q.guidelines||[]).map(c=>`<div style="margin-top:8px"><b>${esc(c.id)}</b> · ${esc(c.guidance_ko||'')}<blockquote style="margin:4px 0;white-space:pre-wrap">${esc(c.quote)}</blockquote><a href="${esc(c.source_url)}" target="_blank" rel="noopener noreferrer">Microsoft 공식 원문</a></div>`).join('');
+const prior=(q.related_analysis||[]).map(a=>`<li>${esc(a.headline)}</li>`).join('');
+const terms=(q.terms||[]).map(t=>`<li><b>${esc(t.term)}</b>: ${esc(t.explanation)}</li>`).join('');
+const asks=(q.followups||[]).map(t=>`<li>${esc(t)}</li>`).join('');
+const costs=(q.cost_inputs||[]).map(b=>`<li><b>${esc(b.label)}</b> · ${esc(b.unit)}<br><span class="muted">기간: ${esc(b.period)} · 범위: ${esc(b.scope)}<br>${esc(b.missing)}</span></li>`).join('');
+return `<div class="interview-guide" style="margin-top:6px;overflow-wrap:anywhere">
+${guides?`<details style="margin:6px 0"><summary>공식 지침 및 실제 파생 근거</summary>${guides}<p><b>파생 목적:</b> ${esc(q.derivation_reason)}</p><p><b>평가 연결:</b> ${esc(q.evaluation_use)}</p>${prior?`<b>선행 현황분석</b><ul>${prior}</ul>`:''}<p class="muted">관련 현황 근거: ${(q.fact_refs||[]).map(esc).join(', ')||'구성 수집만으로 확인할 수 없는 고객 목표·업무 맥락'}<br>공식 지침에서 파생한 자체 질문이며 Microsoft 공식 설문·공식 점수가 아닙니다.</p></details>`:''}
+${terms?`<div class="muted"><b>용어 설명</b><ul style="margin:2px 0 4px 18px;padding:0">${terms}</ul></div>`:''}
+${q.interviewer_note?`<div class="muted"><b>진행자 메모:</b> ${esc(q.interviewer_note)}</div>`:''}
+${asks?`<details style="margin-top:4px"><summary>선택 추가 질문</summary><ul style="margin:4px 0 4px 18px;padding:0">${asks}</ul></details>`:''}
+${costs?`<details style="margin-top:4px"><summary>비용 산정용 확인(선택)</summary><div class="muted">수치를 모르면 미산정으로 남깁니다. 이 입력의 공백만으로 성숙도를 낮추지 않습니다.</div><ul style="margin:4px 0 4px 18px;padding:0">${costs}</ul></details>`:''}</div>`}
+function qcard(aid,q){const a=STATE.answers[q.id]||{};const canRec=canDo('interviewer')&&STATE.consent&&STATE.consent.consent&&STATE.voice&&STATE.voice.enrolled;const opts=['','0','1','2','3','4','미확인','해당없음'];
+return `<div class="card" id="c-${q.id}"><div class="q">${esc(q.origin_id||q.id)}. ${esc(q.question)}${q.must?'<span class="pill must">필수</span>':''}</div>
+<div class="muted">확인 포인트: ${esc(q.point)} · 4점 모습: ${esc(q.top)} · 확인 자료: ${esc(q.evidence)}</div>
+${qguide(q)}
+<div class="row" style="margin:8px 0"><button class="rec" id="r-${q.id}" ${canRec?'':'disabled title="① 목소리 등록과 ② 고객 동의가 필요합니다"'} onclick="rec(${aid},'${q.id}')"><i class="dot"></i>녹음·받아쓰기</button><button onclick="score(${aid},'${q.id}')">AI 요약·점수</button><span class="live" id="l-${q.id}"></span></div>
+<textarea id="t-${q.id}" rows="3" style="width:100%" placeholder="받아쓰기(직접 입력·수정 가능)">${esc(a.transcript)}</textarea>
+<div class="row" style="margin-top:6px"><textarea id="s-${q.id}" rows="4" style="flex:1" placeholder="답변 요약">${esc(a.summary)}</textarea>
+<select id="v-${q.id}">${opts.map(o=>`<option ${String(a.score??'')===o?'selected':''}>${o}</option>`).join('')}</select><button class="sec" onclick="edit(${aid},'${q.id}')">저장</button></div>
+${(STATE.recs||[]).filter(r=>r.qid===q.id).map(r=>`<div class="muted">녹음 ${new Date(r.created*1000).toLocaleString()} · ${(r.bytes/32000).toFixed(0)}초 <audio controls preload="none" src="/api/aicaf/recordings/${r.id}" style="height:28px;vertical-align:middle"></audio></div>`).join('')}
+${basisHtml(a)}${suppHtml(aid,q,a,canRec)}
+<div class="row" style="margin-top:6px"><span class="muted">${a.edited_by?`수정: ${esc(a.edited_by)}`:''}</span>${canDo('interviewer')&&(a.transcript||a.summary||a.score||(STATE.recs||[]).some(r=>r.qid===q.id))?`<button class="sec" style="margin-left:auto" onclick="resetQ(${aid},'${q.id}')">↺ 이 문항 초기화</button>`:''}</div></div>`}
+function basisHtml(a){if(!a.ai_score)return '';let d={};try{d=JSON.parse(a.ai_detail||'{}')}catch(e){}
+const li=(t,xs,c)=>xs&&xs.length?`<div style="margin-top:4px"><b style="color:${c}">${t}</b><ul style="margin:2px 0 0 18px;padding:0">${xs.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:'';
+return `<div class="banner" style="margin-top:6px"><b>평가 근거</b> · AI 점수 ${esc(a.ai_score)}${a.score&&String(a.score)!==String(a.ai_score)?` → 확정 ${esc(a.score)}`:''}
+<div style="margin-top:2px">${esc(a.ai_reason||'')}</div>${li('잘된 점',d.strengths,'var(--teal)')}${li('부족한 점',d.gaps,'#b45309')}${d.next?`<div style="margin-top:4px"><b>다음 점수에 필요한 것</b> — ${esc(d.next)}</div>`:''}</div>`}
+function suppHtml(aid,q,a,canRec){if(!a.ai_score||!canDo('interviewer'))return '';let d={};try{d=JSON.parse(a.ai_detail||'{}')}catch(e){}
+const need=String(a.ai_score)!=='4'&&String(a.ai_score)!=='해당없음';const open=SUPP[q.id];const n=(a.transcript||'').split('[보완 인터뷰]').length-1;
+const head=`<div class="row" style="margin-top:6px">${n?`<span class="pill">보완 ${n}회 반영${a.prev_score?` · 보완 전 ${esc(a.prev_score)} → 현재 ${esc(a.ai_score)}`:''}</span>`:''}<button class="${need?'':'sec'}" style="margin-left:auto" onclick="SUPP['${q.id}']=!SUPP['${q.id}'];render(${aid})">${open?'보완 인터뷰 닫기':'＋ 추가 답변하기(보완 인터뷰)'}</button></div>`;
+if(!open)return head;
+const asks=[...(d.gaps||[])];const ask=asks.length?`“말씀 감사합니다. 혹시 ${asks.map(g=>g.replace(/[.。]$/,'').replace(/(이|가|은|는)? ?(확인되지 않음|확인되지 않았다|정해지지 않음|정해졌다고 보기는 어려움|아직.*)$/,'')).join(', ')} 쪽으로 생각하고 계신 방향이나 고려 중인 부분이 있으시면 편하게 말씀해 주시겠어요? 자세하지 않아도 괜찮습니다.”`:'“이 부분에 대해 혹시 더 보태 주실 내용이 있으실까요?”';
+return head+`<div class="banner" style="margin-top:6px;border-color:var(--teal)"><b>보완 인터뷰</b> — 아래 부족한 부분을 고객에게 다시 여쭤보세요.
+${asks.length?`<ul style="margin:4px 0 0 18px;padding:0">${asks.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}${d.next?`<div class="muted" style="margin-top:4px">다음 점수에 필요한 것: ${esc(d.next)}</div>`:''}
+<div style="margin-top:6px"><b>질문 예시</b> <span class="muted">${esc(ask)}</span></div>
+<div class="row" style="margin-top:8px"><button class="rec" id="r-${q.id}-s" ${canRec?'':'disabled title="① 목소리 등록과 ② 고객 동의가 필요합니다"'} onclick="rec(${aid},'${q.id}',true)"><i class="dot"></i>보완 답변 녹음</button><span class="live" id="l-${q.id}-s"></span></div>
+<textarea id="sp-${q.id}" rows="2" style="width:100%;margin-top:6px" placeholder="녹음 대신 보완 답변을 직접 적을 수도 있습니다"></textarea>
+<div class="row" style="margin-top:6px"><span class="muted">첫 답변과 보완 답변을 합쳐 요약·점수·평가 근거를 다시 만듭니다.</span><button style="margin-left:auto" onclick="suppScore(${aid},'${q.id}')">보완 반영해 다시 평가</button></div></div>`}
+const SUPP={};
+async function suppScore(aid,qid){const b=event.target;const memo=($('#sp-'+qid)||{}).value||'';b.disabled=true;b.textContent='다시 평가 중…';
+try{if(memo.trim())await api(`/api/aicaf/assessments/${aid}/answers/${qid}/supplement`,{method:'POST',body:JSON.stringify({text:memo})});
+await load(aid);const t=(STATE.answers[qid]||{}).transcript||'';if(!t.includes('[보완 인터뷰]')){alert('보완 답변을 녹음하거나 적어 주세요.');b.disabled=false;b.textContent='보완 반영해 다시 평가';return}
+await api(`/api/aicaf/assessments/${aid}/answers/${qid}/score`,{method:'POST',body:JSON.stringify({transcript:t})});SUPP[qid]=false;await load(aid);render(aid)}catch(e){alert(e.message);b.disabled=false;b.textContent='보완 반영해 다시 평가'}}
+async function resetQ(aid,qid){if(!confirm(qid+' 문항의 받아쓰기·요약·점수·평가 근거를 지우고 처음부터 다시 할까요?'))return;await api(`/api/aicaf/assessments/${aid}/answers/${qid}`,{method:'DELETE'});await load(aid);render(aid)}
+async function consent(aid,ok){await api(`/api/aicaf/assessments/${aid}/consent`,{method:'POST',body:JSON.stringify({consent:ok})});await load(aid);render(aid)}
+async function score(aid,qid){const b=event.target;b.disabled=true;b.textContent='판단 중…';try{await api(`/api/aicaf/assessments/${aid}/answers/${qid}/score`,{method:'POST',body:JSON.stringify({transcript:$('#t-'+qid).value})});await load(aid);render(aid)}catch(e){alert(e.message);b.disabled=false;b.textContent='AI 요약·점수'}}
+async function edit(aid,qid){await api(`/api/aicaf/assessments/${aid}/answers/${qid}`,{method:'PUT',body:JSON.stringify({summary:$('#s-'+qid).value,score:$('#v-'+qid).value})});await load(aid);render(aid)}
+const VOICE_LINES=["안녕하세요, 오늘 AI 도입 진단 인터뷰를 진행할 담당자입니다.","지금부터 업무와 데이터, 보안과 비용에 대해 차례로 여쭤보겠습니다.","정리하면 말씀하신 내용이 이렇게 이해하면 맞을까요?","답변해 주셔서 감사합니다. 다음 질문으로 넘어가겠습니다."];
+let VREC=null;
+async function voiceSample(aid,i){const b=$('#vp-b-'+i);if(VREC){VREC.stop();return}
+const stream=await navigator.mediaDevices.getUserMedia({audio:{channelCount:1,echoCancellation:true,noiseSuppression:true}});
+const ctx=new AudioContext();const src=ctx.createMediaStreamSource(stream);await ctx.audioWorklet.addModule('/static/pcm.js');const node=new AudioWorkletNode(ctx,'pcm16k');src.connect(node);
+const chunks=[];node.port.onmessage=e=>chunks.push(new Int16Array(e.data));b.textContent='■ 다 읽었으면 누르기';b.classList.remove('sec');
+VREC={stop:async()=>{stream.getTracks().forEach(t=>t.stop());ctx.close();VREC=null;b.textContent='확인 중…';
+const n=chunks.reduce((a,c)=>a+c.length,0);const all=new Int16Array(n);let o=0;for(const c of chunks){all.set(c,o);o+=c.length}
+const r=await fetch('/api/aicaf/voiceprint/sample',{method:'POST',body:all.buffer,headers:{'Content-Type':'application/octet-stream'}});const d=await r.json();
+if(d.ok){b.textContent='✓ 완료';b.disabled=true;$('#vp-s-'+i).style.color='var(--teal)';$('#vp-msg').textContent=`문장 ${VOICE_LINES.length}개 중 ${d.pending}개 읽음`;$('#vp-commit').disabled=d.pending<d.need}
+else{b.textContent='● 다시 읽기';b.classList.add('sec');alert(d.error)}}}}
+async function voiceCommit(aid){const b=$('#vp-commit');b.disabled=true;b.textContent='등록 중…';const r=await fetch('/api/aicaf/voiceprint/commit',{method:'POST'});const d=await r.json();
+if(!d.ok){alert(d.error);b.textContent='목소리 등록 완료'}await load(aid);render(aid)}
+async function voiceReset(aid){if(!confirm('등록된 목소리를 지우고 다시 등록할까요?'))return;await fetch('/api/aicaf/voiceprint',{method:'DELETE'});await load(aid);render(aid)}
+let REC=null;
+async function rec(aid,qid,supp){if(REC){REC.stop();return}
+const sfx=supp?'-s':'';const btn=$('#r-'+qid+sfx),live=$('#l-'+qid+sfx),ta=$('#t-'+qid);
+const stream=await navigator.mediaDevices.getUserMedia({audio:{channelCount:1,echoCancellation:true,noiseSuppression:true}});
+const ctx=new AudioContext();const src=ctx.createMediaStreamSource(stream);
+await ctx.audioWorklet.addModule('/static/pcm.js');const node=new AudioWorkletNode(ctx,'pcm16k');src.connect(node);
+const ws=new WebSocket(`wss://${location.host}/ws/transcribe?aid=${aid}&qid=${qid}${supp?'&mode=supp':''}`);ws.binaryType='arraybuffer';
+let base=(ta.value?ta.value+'\n':'')+(supp?'[보완 인터뷰]\n':'');
+node.port.onmessage=e=>{if(ws.readyState===1)ws.send(e.data)};
+ws.onmessage=e=>{const m=JSON.parse(e.data);if(m.type==='partial')live.textContent='… '+m.text;if(m.type==='final'){base+=m.text+' ';ta.value=base;live.textContent=''}if(m.type==='error'){alert(m.text)}};
+const stop=async()=>{try{ws.readyState===1&&ws.send('stop')}catch(e){}stream.getTracks().forEach(t=>t.stop());ctx.close();btn.classList.remove('on');btn.innerHTML='<i class="dot"></i>'+(supp?'보완 답변 녹음':'녹음·받아쓰기');REC=null;setTimeout(async()=>{await load(aid);render(aid)},2500)};
+ws.onclose=e=>{if(REC){live.textContent='⚠ 서버 연결이 끊겨 녹음이 중지됐습니다. 지금까지 내용은 저장됩니다. 다시 녹음을 누르면 이어서 기록됩니다.';stop()}};btn.classList.add('on');btn.innerHTML='<i class="sq"></i>중지';REC={stop}}
+boot().catch(e=>$('#app').textContent='오류: '+e.message);
+</script></body></html>

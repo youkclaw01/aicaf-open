@@ -1,0 +1,101 @@
+[
+  {
+    "url": "https://azure.github.io/AI-Landing-Zones/architecture/design-checklist/",
+    "source_id": "MS01",
+    "text_path": "sources-current/MS01.txt",
+    "text_sha256": "e8369e343df21c37b2df7efb18f3ca11e4ab9ce941d2edae3200dda3a26487fa",
+    "fetched_at_utc": "2026-10-10T16:23:04.851044+00:00",
+    "original_html_sha256": "be5baef7a6a4b54e3e62af1b21a8f8f0ef4eef90d89abe05dfd0409388e5ed78",
+    "title": "Design Checklist - AI Landing Zones"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/govern",
+    "source_id": "MS02",
+    "text_path": "sources-current/MS02.txt",
+    "text_sha256": "e866ee1e6c6b6cc9d2ef38f3229e03374d39045d03b68299ff77d0434f4318a5",
+    "fetched_at_utc": "2026-10-10T16:23:05.212976+00:00",
+    "original_html_sha256": "6bbd9ca870139131ff715f81a98d0a170d3adaf02e5b6e9cfb385b8c90284c5c",
+    "title": "Govern AI - Guidance to set up your organization's AI governance process - Cloud Adoption Framework | Microsoft Learn"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/manage",
+    "source_id": "MS03",
+    "text_path": "sources-current/MS03.txt",
+    "text_sha256": "3d1c8cf7381b22002444381e27791e1de0c3306f741edccdd7e65cb30eeb2446",
+    "fetched_at_utc": "2026-10-10T16:23:05.550387+00:00",
+    "original_html_sha256": "5fb2e5e5f97cec163138d7f0d806a3e5e337258f1af86d6181859fcc5e0e8aec",
+    "title": "Manage AI - Guidance to set up your organization's AI management process - Cloud Adoption Framework | Microsoft Learn"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/ready",
+    "source_id": "MS04",
+    "text_path": "sources-current/MS04.txt",
+    "text_sha256": "13cbaa599604108630d33d76cd2045b4b8bf372276bf49e0c6f0ba0a78f64b37",
+    "fetched_at_utc": "2026-10-10T16:23:05.980847+00:00",
+    "original_html_sha256": "14a4d8afff67561e261f408d1e6c52b2ee143c9466dafb160e8c34d82c9dd460",
+    "title": "AI Ready - Cloud Adoption Framework | Microsoft Learn"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/secure",
+    "source_id": "MS05",
+    "text_path": "sources-current/MS05.txt",
+    "text_sha256": "aea3fbd542d374145a401a9840b92b448e211ee59b8156279e5d76463392f286",
+    "fetched_at_utc": "2026-10-10T16:23:06.378862+00:00",
+    "original_html_sha256": "f46e26f32442beca4c7dc292ae8d52f6cb7c86f45e2758aa267d9939dfe984c5",
+    "title": "Secure AI - Guidance to set up your organization's AI security process - Cloud Adoption Framework | Microsoft Learn"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/strategy",
+    "source_id": "MS06",
+    "text_path": "sources-current/MS06.txt",
+    "text_sha256": "d2b5596be3c27f3e8272f155b20e6be3b6363319f59ca53ad1165471d547bdd8",
+    "fetched_at_utc": "2026-10-10T16:23:06.777204+00:00",
+    "original_html_sha256": "5e1257da5c66d58dcee6b6987b0e8b926dce1fef69bddfe34553fa279c9e67ae",
+    "title": "AI strategy - Guidance to set your organization's AI strategy - Cloud Adoption Framework | Microsoft Learn"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/application-design",
+    "source_id": "MS07",
+    "text_path": "sources-current/MS07.txt",
+    "text_sha256": "a03e460cac602cc0a6283a5584a0381b812a4721bd10bccfe37080281abceb6f",
+    "fetched_at_utc": "2026-10-10T16:23:07.136109+00:00",
+    "original_html_sha256": "29af77f774740690fdf1dbade6cc1ec3e0a5196cf768be30932380f8638c4404",
+    "title": "Application Design for AI Workloads on Azure - Microsoft Azure Well-Architected Framework | Microsoft Learn"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/design-principles",
+    "source_id": "MS08",
+    "text_path": "sources-current/MS08.txt",
+    "text_sha256": "9e11e3e48c8a3479c732509e7d9962c4b5d6b1a153e974273efbb9089527349e",
+    "fetched_at_utc": "2026-10-10T16:23:07.731622+00:00",
+    "original_html_sha256": "4dcb9302b2da831aecf592cf153a703e71506202cc76b8e5c16f9a016133c92a",
+    "title": "Design Principles for AI Workloads on Azure - Microsoft Azure Well-Architected Framework | Microsoft Learn"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/mlops-genaiops",
+    "source_id": "MS09",
+    "text_path": "sources-current/MS09.txt",
+    "text_sha256": "6b4c68ab68ce3da2c3855518b96259c2c6f1e99aed85f79567145bce7e981cdf",
+    "fetched_at_utc": "2026-10-10T16:23:08.161927+00:00",
+    "original_html_sha256": "f6544380a4eec831c8c09597f9490afab359236f60788686304805ebec2c2a9e",
+    "title": "MLOps and GenAIOps for AI Workloads on Azure - Microsoft Azure Well-Architected Framework | Microsoft Learn"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/security/benchmark/azure/baselines/azure-openai-security-baseline",
+    "source_id": "MS10",
+    "text_path": "sources-current/MS10.txt",
+    "text_sha256": "9c56fd478b7686ac4b2921740d092996b2bc85288057e9b8f9d19c72c381f5eb",
+    "fetched_at_utc": "2026-10-10T16:23:08.510029+00:00",
+    "original_html_sha256": "d80f06879bcf1e6506db59b2343da64f3ab0d05a4ba73c25d045376adb3f31c9",
+    "title": "Azure security baseline for Azure OpenAI | Microsoft Learn"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/well-architected/ai/responsible-ai",
+    "source_id": "MS11",
+    "text_path": "sources-current/MS11.txt",
+    "text_sha256": "1fd951e36a2bdbe41de1cfe963aff431b2c1102aaf66bf8b01dc3ed1963406f5",
+    "fetched_at_utc": "2026-10-10T16:45:09.572385+00:00",
+    "original_html_sha256": "d2ecfa08bf4a0a2cf64b5b786cd8cbf81cb3c5e08f4c8aa54795ee902b3acee8",
+    "title": "Responsible AI in Azure Workloads - Microsoft Azure Well-Architected Framework | Microsoft Learn"
+  }
+]

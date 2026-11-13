@@ -1,0 +1,14 @@
+P0 기준을 적용하여 stage=synthesis 결과를 작성한다. 입력의 stage_data.approved_areas는 이미 검증한 P1 결과다. stage_data.direction_slots에는 사용할 ID가 제공된다.
+
+영역별 관찰·판정·시사점을 근본 제약과 고객 목표에 따라 종합한다. 각 direction은 title, text, customer_impact, change_direction, area_implication_refs, fact_refs, criterion_refs, goal_refs를 가진다.
+
+U138078의 img_734e5dc9e1cb.png를 이 단계의 구조 참고로 사용한다. 분석 영역→Fact Finding→영역별 이슈·시사점→종합 방향이 추적되어야 한다. 원본의 분석 분류/중앙 사실/우측 종합 시사점 연결을 실제 fact_refs와 edges로 구현하며 샘플의 분류 개수·수치·Reliability/WARA 결론은 복사하지 않는다. 영역 이름만 연결하지 말고, 종합 방향에 실제로 기여한 Fact Finding을 연결한다. 사실 간 공통 원인이나 관계가 확인되지 않으면 임의로 같은 원인이라고 쓰지 않는다.
+
+종합 방향의 개수를 샘플의 4개·5개에 맞추지 않는다. direction_slots 중 근거가 있는 항목만 사용하며 부족한 슬롯은 unresolved에 추가 할당 필요를 기록한다. 미확인 사실은 확인 방향에 연결할 수 있으나 실제 결함 방향으로 확정하지 않는다.
+
+연결은 별도 edges에 from_id, to_id, relation을 반환한다. relation은 supports 또는 consolidates이다. direction에 나열한 참조와 edges의 관계가 일치해야 한다. 여러 사실→한 방향, 한 사실→여러 방향을 허용한다. 선만 있고 설명이 없는 방향, 근거 없이 만든 방향은 허용하지 않는다.
+
+반환 구조: {stage, run, directions:[{id,title,text,customer_impact,change_direction,area_implication_refs,fact_refs,criterion_refs,goal_refs}], edges:[{from_id,to_id,relation}], unresolved:[{topic,reason,required_evidence,fact_refs}]}
+
+입력:
+{{stage_input_json}}

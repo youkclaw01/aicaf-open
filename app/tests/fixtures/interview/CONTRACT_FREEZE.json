@@ -1,0 +1,35 @@
+{
+  "schema": "approved-interview-test-contract/1",
+  "original_contract_freeze_sha256": "9a195a7a907d65c1b2d6814e93fb3d74d12dd5df426c5e138482642664a5b647",
+  "files": [
+    {
+      "path": "scoring.py",
+      "sha256": "40774118ce31f83323466902eb92da1a875eba034839f753e3e72add26fd0d03"
+    },
+    {
+      "path": "questions.py",
+      "sha256": "aac87e2873966bb5b180c973894a32e5300947551c5cce1437e2f6c305077e1b"
+    },
+    {
+      "path": "interview_question_details.py",
+      "sha256": "fc9b79023567b3af0b15839e828b0c5ef2e87c21735301512a24233df8900475"
+    },
+    {
+      "path": "interview_template.pptx",
+      "sha256": "88c8b2a58c3f2532282f367e02a019f5f832380418da51e39382d57be8fa84f8"
+    },
+    {
+      "path": "questionnaires/questionnaire-new.xlsx",
+      "sha256": "56f53a46393fed5b0170d7e9f0c624a511acacb679afa943ef82236b5e6d8ed0"
+    },
+    {
+      "path": "questionnaires/questionnaire-existing.xlsx",
+      "sha256": "7aee38adaea4ca1e2c35b900496eff32d3fa2e80b9d4702fe1cc059672f6cbe9"
+    }
+  ],
+  "excluded_non_product_entries": [
+    "retired_agent_session",
+    "customer_database_snapshot",
+    "agent_runtime_observations"
+  ]
+}

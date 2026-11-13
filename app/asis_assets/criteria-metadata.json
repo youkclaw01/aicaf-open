@@ -1,0 +1,1172 @@
+[
+  {
+    "id": "WAF-AI-RE1",
+    "original_id": "WAF-AI-RE1",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "COMPUTE",
+    "recommendation_quote": null,
+    "archived_principle": "Mitigate single points of failure.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-RE2",
+    "original_id": "WAF-AI-RE2",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "COMPUTE",
+    "recommendation_quote": null,
+    "archived_principle": "Conduct failure mode analysis. Take advantage of well-known design patterns.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-RE3",
+    "original_id": "WAF-AI-RE3",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "COMPUTE",
+    "recommendation_quote": null,
+    "archived_principle": "Balance reliability objectives across dependent components.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-RE4",
+    "original_id": "WAF-AI-RE4",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "COMPUTE",
+    "recommendation_quote": null,
+    "archived_principle": "Design for operational reliability.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-RE5",
+    "original_id": "WAF-AI-RE5",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "COMPUTE",
+    "recommendation_quote": null,
+    "archived_principle": "Design for a reliable user experience.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-SE1",
+    "original_id": "WAF-AI-SE1",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Earn user trust.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-SE2",
+    "original_id": "WAF-AI-SE2",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "DATA",
+    "recommendation_quote": null,
+    "archived_principle": "Protect data at rest, in transit, and in use, according to the sensitivity requirements of the workload.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-SE3",
+    "original_id": "WAF-AI-SE3",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "SECID",
+    "recommendation_quote": null,
+    "archived_principle": "Invest in robust access management for identities (user and system) that access the system.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-SE4",
+    "original_id": "WAF-AI-SE4",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "NETWORK",
+    "recommendation_quote": null,
+    "archived_principle": "Protect the integrity of the design by implementing segmentation.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-SE5",
+    "original_id": "WAF-AI-SE5",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "SECID",
+    "recommendation_quote": null,
+    "archived_principle": "Conduct security testing.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-SE6",
+    "original_id": "WAF-AI-SE6",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "NETWORK",
+    "recommendation_quote": null,
+    "archived_principle": "Reduce the attack surface by enforcing strict user access and API design.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-CO1",
+    "original_id": "WAF-AI-CO1",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "COST",
+    "recommendation_quote": null,
+    "archived_principle": "Determine the cost drivers by doing a comprehensive cost modeling exercise.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-CO2",
+    "original_id": "WAF-AI-CO2",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "COST",
+    "recommendation_quote": null,
+    "archived_principle": "Pay for what you intend to use.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-CO3",
+    "original_id": "WAF-AI-CO3",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "COST",
+    "recommendation_quote": null,
+    "archived_principle": "Use what you pay for. Minimize waste.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-CO4",
+    "original_id": "WAF-AI-CO4",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "COST",
+    "recommendation_quote": null,
+    "archived_principle": "Optimize operational costs.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-OE1",
+    "original_id": "WAF-AI-OE1",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "OPS",
+    "recommendation_quote": null,
+    "archived_principle": "Choose technologies that minimize operational burden.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-OE2",
+    "original_id": "WAF-AI-OE2",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "OPS",
+    "recommendation_quote": null,
+    "archived_principle": "Create an automated monitoring system that supports alerting functionality, including logging and auditability.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-OE3",
+    "original_id": "WAF-AI-OE3",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "OPS",
+    "recommendation_quote": null,
+    "archived_principle": "Automate the detection and mitigation of model decay.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-OE4",
+    "original_id": "WAF-AI-OE4",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "OPS",
+    "recommendation_quote": null,
+    "archived_principle": "Implement safe deployments.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-OE5",
+    "original_id": "WAF-AI-OE5",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "OPS",
+    "recommendation_quote": null,
+    "archived_principle": "Continuously evaluate the user experience in production.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-PE1",
+    "original_id": "WAF-AI-PE1",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Establish performance benchmarks.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-PE2",
+    "original_id": "WAF-AI-PE2",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Evaluate resource needs for meeting performance targets.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-PE3",
+    "original_id": "WAF-AI-PE3",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Collect and analyze performance metrics, and identify bottlenecks.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-PE4",
+    "original_id": "WAF-AI-PE4",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Continuously improve benchmark performance by using quality measurements from production.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-PE5",
+    "original_id": "WAF-AI-PE5",
+    "framework": "Well-Architected Framework – AI workloads design principles",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Implement automated collection and analysis of performance metrics, alerts, and model retraining to maintain model efficacy.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-GOV1",
+    "original_id": "CAF-AI-GOV1",
+    "framework": "Cloud Adoption Framework – Govern AI",
+    "source_area": "GOV",
+    "recommendation_quote": null,
+    "archived_principle": "1. Assess AI organizational risks",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-GOV2",
+    "original_id": "CAF-AI-GOV2",
+    "framework": "Cloud Adoption Framework – Govern AI",
+    "source_area": "GOV",
+    "recommendation_quote": null,
+    "archived_principle": "2. Document AI governance policies",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-GOV3",
+    "original_id": "CAF-AI-GOV3",
+    "framework": "Cloud Adoption Framework – Govern AI",
+    "source_area": "GOV",
+    "recommendation_quote": null,
+    "archived_principle": "3. Enforce AI governance policies",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-GOV4",
+    "original_id": "CAF-AI-GOV4",
+    "framework": "Cloud Adoption Framework – Govern AI",
+    "source_area": "GOV",
+    "recommendation_quote": null,
+    "archived_principle": "4. Monitor AI organizational risks",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-SEC1",
+    "original_id": "CAF-AI-SEC1",
+    "framework": "Cloud Adoption Framework – Secure AI",
+    "source_area": "SECID",
+    "recommendation_quote": null,
+    "archived_principle": "Discover AI security risks",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-SEC2",
+    "original_id": "CAF-AI-SEC2",
+    "framework": "Cloud Adoption Framework – Secure AI",
+    "source_area": "SECID",
+    "recommendation_quote": null,
+    "archived_principle": "Protect AI resources and data",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-SEC3",
+    "original_id": "CAF-AI-SEC3",
+    "framework": "Cloud Adoption Framework – Secure AI",
+    "source_area": "SECID",
+    "recommendation_quote": null,
+    "archived_principle": "Detect AI security threats",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-MNG1",
+    "original_id": "CAF-AI-MNG1",
+    "framework": "Cloud Adoption Framework – Manage AI",
+    "source_area": "OPS",
+    "recommendation_quote": null,
+    "archived_principle": "Manage AI operations",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-MNG2",
+    "original_id": "CAF-AI-MNG2",
+    "framework": "Cloud Adoption Framework – Manage AI",
+    "source_area": "OPS",
+    "recommendation_quote": null,
+    "archived_principle": "Manage AI deployment",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-MNG3",
+    "original_id": "CAF-AI-MNG3",
+    "framework": "Cloud Adoption Framework – Manage AI",
+    "source_area": "OPS",
+    "recommendation_quote": null,
+    "archived_principle": "Manage AI models",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-MNG4",
+    "original_id": "CAF-AI-MNG4",
+    "framework": "Cloud Adoption Framework – Manage AI",
+    "source_area": "OPS",
+    "recommendation_quote": null,
+    "archived_principle": "Manage AI costs",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-MNG5",
+    "original_id": "CAF-AI-MNG5",
+    "framework": "Cloud Adoption Framework – Manage AI",
+    "source_area": "OPS",
+    "recommendation_quote": null,
+    "archived_principle": "Manage AI data",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-MNG6",
+    "original_id": "CAF-AI-MNG6",
+    "framework": "Cloud Adoption Framework – Manage AI",
+    "source_area": "OPS",
+    "recommendation_quote": null,
+    "archived_principle": "Manage AI business continuity",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-RDY1",
+    "original_id": "CAF-AI-RDY1",
+    "framework": "Cloud Adoption Framework – AI Ready (landing zone)",
+    "source_area": "GOV",
+    "recommendation_quote": null,
+    "archived_principle": "AI governance",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-RDY2",
+    "original_id": "CAF-AI-RDY2",
+    "framework": "Cloud Adoption Framework – AI Ready (landing zone)",
+    "source_area": "NETWORK",
+    "recommendation_quote": null,
+    "archived_principle": "AI networking",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-RDY3",
+    "original_id": "CAF-AI-RDY3",
+    "framework": "Cloud Adoption Framework – AI Ready (landing zone)",
+    "source_area": "COMPUTE",
+    "recommendation_quote": null,
+    "archived_principle": "AI reliability",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-RDY4",
+    "original_id": "CAF-AI-RDY4",
+    "framework": "Cloud Adoption Framework – AI Ready (landing zone)",
+    "source_area": "GOV",
+    "recommendation_quote": null,
+    "archived_principle": "AI in an Azure landing zone",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-STR1",
+    "original_id": "CAF-AI-STR1",
+    "framework": "Cloud Adoption Framework – AI strategy",
+    "source_area": "GOV",
+    "recommendation_quote": null,
+    "archived_principle": "1. AI use case identification",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-STR2",
+    "original_id": "CAF-AI-STR2",
+    "framework": "Cloud Adoption Framework – AI strategy",
+    "source_area": "GOV",
+    "recommendation_quote": null,
+    "archived_principle": "2. AI technology strategy",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-STR3",
+    "original_id": "CAF-AI-STR3",
+    "framework": "Cloud Adoption Framework – AI strategy",
+    "source_area": "GOV",
+    "recommendation_quote": null,
+    "archived_principle": "3. Responsible AI strategy",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-STR4",
+    "original_id": "CAF-AI-STR4",
+    "framework": "Cloud Adoption Framework – AI strategy",
+    "source_area": "GOV",
+    "recommendation_quote": null,
+    "archived_principle": "4. Data strategy",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "CAF-AI-STR5",
+    "original_id": "CAF-AI-STR5",
+    "framework": "Cloud Adoption Framework – AI strategy",
+    "source_area": "GOV",
+    "recommendation_quote": null,
+    "archived_principle": "5. How to adopt AI",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-APP1",
+    "original_id": "WAF-AI-APP1",
+    "framework": "Well-Architected – AI application design",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Distinguish between inferencing and intelligent applications",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-APP2",
+    "original_id": "WAF-AI-APP2",
+    "framework": "Well-Architected – AI application design",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Fundamental AI application design guidelines",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-APP3",
+    "original_id": "WAF-AI-APP3",
+    "framework": "Well-Architected – AI application design",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Plan for model deprecation",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-APP4",
+    "original_id": "WAF-AI-APP4",
+    "framework": "Well-Architected – AI application design",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Containerize components",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-APP5",
+    "original_id": "WAF-AI-APP5",
+    "framework": "Well-Architected – AI application design",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Implement multi-layer caching strategies",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-APP6",
+    "original_id": "WAF-AI-APP6",
+    "framework": "Well-Architected – AI application design",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Evaluate the use of orchestration and agents in generative AI solutions",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-APP7",
+    "original_id": "WAF-AI-APP7",
+    "framework": "Well-Architected – AI application design",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Implement AI gateways for policy enforcement",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-APP8",
+    "original_id": "WAF-AI-APP8",
+    "framework": "Well-Architected – AI application design",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Use AI application design patterns",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-APP9",
+    "original_id": "WAF-AI-APP9",
+    "framework": "Well-Architected – AI application design",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Choose the right frameworks, libraries, and protocols",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-APP10",
+    "original_id": "WAF-AI-APP10",
+    "framework": "Well-Architected – AI application design",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Design a security strategy for your workload's AI components",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-APP11",
+    "original_id": "WAF-AI-APP11",
+    "framework": "Well-Architected – AI application design",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Consider nonfunctional requirements",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-RAI1",
+    "original_id": "WAF-AI-RAI1",
+    "framework": "Well-Architected – Responsible AI",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Develop policies for responsible AI",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-RAI2",
+    "original_id": "WAF-AI-RAI2",
+    "framework": "Well-Architected – Responsible AI",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Enforce governance on policies for responsible AI",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-RAI3",
+    "original_id": "WAF-AI-RAI3",
+    "framework": "Well-Architected – Responsible AI",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Make the user experience safe",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-RAI4",
+    "original_id": "WAF-AI-RAI4",
+    "framework": "Well-Architected – Responsible AI",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Implement agentic AI safeguards",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-RAI5",
+    "original_id": "WAF-AI-RAI5",
+    "framework": "Well-Architected – Responsible AI",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Operationalize content safety measures",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-RAI6",
+    "original_id": "WAF-AI-RAI6",
+    "framework": "Well-Architected – Responsible AI",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Inspect incoming and outgoing data",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-RAI7",
+    "original_id": "WAF-AI-RAI7",
+    "framework": "Well-Architected – Responsible AI",
+    "source_area": "AISVC",
+    "recommendation_quote": null,
+    "archived_principle": "Handle user data appropriately",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-OPS1",
+    "original_id": "WAF-AI-OPS1",
+    "framework": "Well-Architected – MLOps/GenAIOps",
+    "source_area": "OPS",
+    "recommendation_quote": null,
+    "archived_principle": "Workload operations lifecycle",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-OPS2",
+    "original_id": "WAF-AI-OPS2",
+    "framework": "Well-Architected – MLOps/GenAIOps",
+    "source_area": "OPS",
+    "recommendation_quote": null,
+    "archived_principle": "Automation",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-OPS3",
+    "original_id": "WAF-AI-OPS3",
+    "framework": "Well-Architected – MLOps/GenAIOps",
+    "source_area": "OPS",
+    "recommendation_quote": null,
+    "archived_principle": "Deployment pipelines",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-OPS4",
+    "original_id": "WAF-AI-OPS4",
+    "framework": "Well-Architected – MLOps/GenAIOps",
+    "source_area": "OPS",
+    "recommendation_quote": null,
+    "archived_principle": "Model maintenance",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "WAF-AI-OPS5",
+    "original_id": "WAF-AI-OPS5",
+    "framework": "Well-Architected – MLOps/GenAIOps",
+    "source_area": "OPS",
+    "recommendation_quote": null,
+    "archived_principle": "Continuous evolution",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "MCSB-AOAI-NS-1",
+    "original_id": "MCSB-AOAI-NS-1",
+    "framework": "Microsoft cloud security benchmark – Azure OpenAI security baseline",
+    "source_area": "NETWORK",
+    "recommendation_quote": null,
+    "archived_principle": "Establish network segmentation boundaries",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "MCSB-AOAI-NS-2",
+    "original_id": "MCSB-AOAI-NS-2",
+    "framework": "Microsoft cloud security benchmark – Azure OpenAI security baseline",
+    "source_area": "NETWORK",
+    "recommendation_quote": null,
+    "archived_principle": "Secure cloud services with network controls",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "MCSB-AOAI-IM-1",
+    "original_id": "MCSB-AOAI-IM-1",
+    "framework": "Microsoft cloud security benchmark – Azure OpenAI security baseline",
+    "source_area": "SECID",
+    "recommendation_quote": null,
+    "archived_principle": "Use centralized identity and authentication system",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "MCSB-AOAI-IM-3",
+    "original_id": "MCSB-AOAI-IM-3",
+    "framework": "Microsoft cloud security benchmark – Azure OpenAI security baseline",
+    "source_area": "SECID",
+    "recommendation_quote": null,
+    "archived_principle": "Manage application identities securely and automatically",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "MCSB-AOAI-IM-7",
+    "original_id": "MCSB-AOAI-IM-7",
+    "framework": "Microsoft cloud security benchmark – Azure OpenAI security baseline",
+    "source_area": "SECID",
+    "recommendation_quote": null,
+    "archived_principle": "Restrict resource access based on conditions",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "MCSB-AOAI-IM-8",
+    "original_id": "MCSB-AOAI-IM-8",
+    "framework": "Microsoft cloud security benchmark – Azure OpenAI security baseline",
+    "source_area": "SECID",
+    "recommendation_quote": null,
+    "archived_principle": "Restrict the exposure of credential and secrets",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "MCSB-AOAI-PA-7",
+    "original_id": "MCSB-AOAI-PA-7",
+    "framework": "Microsoft cloud security benchmark – Azure OpenAI security baseline",
+    "source_area": "SECID",
+    "recommendation_quote": null,
+    "archived_principle": "Follow just enough administration (least privilege) principle",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "MCSB-AOAI-PA-8",
+    "original_id": "MCSB-AOAI-PA-8",
+    "framework": "Microsoft cloud security benchmark – Azure OpenAI security baseline",
+    "source_area": "SECID",
+    "recommendation_quote": null,
+    "archived_principle": "Determine access process for cloud provider support",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "MCSB-AOAI-DP-1",
+    "original_id": "MCSB-AOAI-DP-1",
+    "framework": "Microsoft cloud security benchmark – Azure OpenAI security baseline",
+    "source_area": "DATA",
+    "recommendation_quote": null,
+    "archived_principle": "Discover, classify, and label sensitive data",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "MCSB-AOAI-DP-2",
+    "original_id": "MCSB-AOAI-DP-2",
+    "framework": "Microsoft cloud security benchmark – Azure OpenAI security baseline",
+    "source_area": "DATA",
+    "recommendation_quote": null,
+    "archived_principle": "Monitor anomalies and threats targeting sensitive data",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "MCSB-AOAI-DP-3",
+    "original_id": "MCSB-AOAI-DP-3",
+    "framework": "Microsoft cloud security benchmark – Azure OpenAI security baseline",
+    "source_area": "DATA",
+    "recommendation_quote": null,
+    "archived_principle": "Encrypt sensitive data in transit",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "MCSB-AOAI-DP-4",
+    "original_id": "MCSB-AOAI-DP-4",
+    "framework": "Microsoft cloud security benchmark – Azure OpenAI security baseline",
+    "source_area": "DATA",
+    "recommendation_quote": null,
+    "archived_principle": "Enable data at rest encryption by default",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "MCSB-AOAI-DP-5",
+    "original_id": "MCSB-AOAI-DP-5",
+    "framework": "Microsoft cloud security benchmark – Azure OpenAI security baseline",
+    "source_area": "DATA",
+    "recommendation_quote": null,
+    "archived_principle": "Use customer-managed key option in data at rest encryption when required",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "MCSB-AOAI-DP-6",
+    "original_id": "MCSB-AOAI-DP-6",
+    "framework": "Microsoft cloud security benchmark – Azure OpenAI security baseline",
+    "source_area": "DATA",
+    "recommendation_quote": null,
+    "archived_principle": "Use a secure key management process",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "MCSB-AOAI-AM-2",
+    "original_id": "MCSB-AOAI-AM-2",
+    "framework": "Microsoft cloud security benchmark – Azure OpenAI security baseline",
+    "source_area": "GOV",
+    "recommendation_quote": null,
+    "archived_principle": "Use only approved services",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "MCSB-AOAI-LT-4",
+    "original_id": "MCSB-AOAI-LT-4",
+    "framework": "Microsoft cloud security benchmark – Azure OpenAI security baseline",
+    "source_area": "OPS",
+    "recommendation_quote": null,
+    "archived_principle": "Enable logging for security investigation",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-C-R1",
+    "original_id": "C-R1",
+    "framework": "AI Landing Zones – Design Checklist (Compute)",
+    "source_area": "COMPUTE",
+    "recommendation_quote": "Recommended to standardize the compute options across all components to ensure consistency and ease of management. Leverage PaaS compute options such as Azure Container Apps, Azure Apps Service, Azure Kubernetes Service to optimize resource utilization and simplify management.",
+    "archived_principle": "Determine the compute options of your models, orchestrators, self hosted agents and application (frontend, backend & Ingestion) in an AI Landing Zone.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-CO-R1",
+    "original_id": "CO-R1",
+    "framework": "AI Landing Zones – Design Checklist (Cost)",
+    "source_area": "COST",
+    "recommendation_quote": "Estimate costs before using Azure AI Foundry and its services for an AI application",
+    "archived_principle": "Familirize yourself with pricing & billing model of Azure AI Foundry and its services",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-CO-R2",
+    "original_id": "CO-R2",
+    "framework": "AI Landing Zones – Design Checklist (Cost)",
+    "source_area": "COST",
+    "recommendation_quote": "It's common to combine PTU endpoints and consumption-based endpoints for cost optimization. Use PTUs on the AI model primary endpoint and a secondary, consumption-based AI endpoint for spillover.",
+    "archived_principle": "Consider having PTU & PAYGO Endpoints endpoints. If you have predictable workloads, use AI commitment tiers in Azure AI services. For Azure OpenAI models, use provisioned throughput units (PTUs), which can be less expensive than pay-as-you-go (consumption-based) pricing.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-CO-R3",
+    "original_id": "CO-R3",
+    "framework": "AI Landing Zones – Design Checklist (Cost)",
+    "source_area": "COST",
+    "recommendation_quote": "Azure OpenAI models allow you to use different deployment types. Global deployment offers lower cost-per-token pricing on certain OpenAI models.",
+    "archived_principle": "Consider the various Azure OpenAI deployment types in particular the global deployment type.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-CO-R4",
+    "original_id": "CO-R4",
+    "framework": "AI Landing Zones – Design Checklist (Cost)",
+    "source_area": "COST",
+    "recommendation_quote": "Define and enforce a policy stating that AI resources must use the automatic shutdown feature on virtual machines and compute instances in Azure AI Foundry and Azure Machine Learning. Automatic shutdown is applicable to nonproduction environments and production workloads that you can take offline for certain periods of time.",
+    "archived_principle": "Cosider implementing auto shutdown policy for compute resources in non-prod environment.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-D-R1",
+    "original_id": "D-R1",
+    "framework": "AI Landing Zones – Design Checklist (Data)",
+    "source_area": "DATA",
+    "recommendation_quote": "Recommended to use standard setup of Agent service and store data in your own Azure resources, giving you full ownership and control.",
+    "archived_principle": "Determine how stateful entities such as threads, messages, and runs created during usage along with files uploaded during Foundry Agent Service setup or as part of a message are managed",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-D-R2",
+    "original_id": "D-R2",
+    "framework": "AI Landing Zones – Design Checklist (Data)",
+    "source_area": "DATA",
+    "recommendation_quote": "Considering a project represents a distinct application or use case, it's recommended to separate these storage components by project to ensure data isolation and better manageability.",
+    "archived_principle": "Determine whether thread storage (conversation history, agent definitions), file storage (uploaded documents), vector search (embeddings and retrieval) will be shared by all project or separated by projects",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-D-R3",
+    "original_id": "D-R3",
+    "framework": "AI Landing Zones – Design Checklist (Data)",
+    "source_area": "DATA",
+    "recommendation_quote": "Recommended to leverage the Microsoft Fabric data agent for this purpose",
+    "archived_principle": "In case you have Microsoft Fabric, determine how you would surface data from it into AI Foundry",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-G-R1",
+    "original_id": "G-R1",
+    "framework": "AI Landing Zones – Design Checklist (Governance)",
+    "source_area": "GOV",
+    "recommendation_quote": "Automate policy enforcement with Azure Policy to enforce policies automatically across AI deployments, reducing human error. Apply AI policies to each management group.",
+    "archived_principle": "Consider using built-in AI related policies for governance of AI resources and AI apps",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-G-R2",
+    "original_id": "G-R2",
+    "framework": "AI Landing Zones – Design Checklist (Governance)",
+    "source_area": "GOV",
+    "recommendation_quote": "Apply the regulatory compliance policy initiatives",
+    "archived_principle": "Review applicable industry standards such as the NIST Artificial Intelligence Risk Management Framework (AI RMF) and NIST AI RMF Playbook and ensure alignment and compliance with them.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-G-R3",
+    "original_id": "G-R3",
+    "framework": "AI Landing Zones – Design Checklist (Governance)",
+    "source_area": "GOV",
+    "recommendation_quote": "Use the Responsible AI dashboard to generate reports around model outputs.",
+    "archived_principle": "Consider implementing responsible AI standards",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-G-R4",
+    "original_id": "G-R4",
+    "framework": "AI Landing Zones – Design Checklist (Governance)",
+    "source_area": "GOV",
+    "recommendation_quote": "Use Azure AI Content Safety to define a baseline content filter for your approved AI models. This safety system runs both the prompt and completion for your model through a group of classification models. These classification models detect and help prevent the output of harmful content across a range of categories. Content Safety provides features like prompt shields, groundedness detection, and protected material text detection. It scans images and text.",
+    "archived_principle": "Consider implementing Azure AI Content Safety APIs that can be called for testing to facilitate content safety testing.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-G-R5",
+    "original_id": "G-R5",
+    "framework": "AI Landing Zones – Design Checklist (Governance)",
+    "source_area": "GOV",
+    "recommendation_quote": "Use Azure Policy to manage which specific models your teams are allowed to deploy from the Azure AI Foundry model catalog. You have the option to use a built-in policy or create a custom policy. Since this approach uses an allowlist, begin with an audit effect. The audit effect allows you to monitor the models your teams are using without restricting deployments. Only switch to the deny effect once you understand the AI development and experimentation needs of workload teams, so you don't hinder their progress unnecessarily. If you switch a policy to deny , it doesn't automatically remove noncompliant models that teams have already deployed. You must remediate those models manually.",
+    "archived_principle": "Govern model availability in your organization across applications and workload",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-I-R1",
+    "original_id": "I-R1",
+    "framework": "AI Landing Zones – Design Checklist (Identity)",
+    "source_area": "SECID",
+    "recommendation_quote": "Use managed identity on all supported Azure services. Grant least privilege access to application resources that need to access AI model endpoints. Secure Azure service-to-service interactions. Use managed identity to allow Azure services to authenticate to each other without managing credentials.",
+    "archived_principle": "Consider using managed identities with least privilege access.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-I-R2",
+    "original_id": "I-R2",
+    "framework": "AI Landing Zones – Design Checklist (Identity)",
+    "source_area": "SECID",
+    "recommendation_quote": "Enable multifactor authentication (MFA) and prefer secondary administrative accounts or just-in-time access with Privileged Identity Management (PIM) for sensitive accounts. Limit control plane access using services like Azure Bastion as secure entry points into private networks.",
+    "archived_principle": "Leverage MFA and PIM for sensitive accounts.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-I-R3",
+    "original_id": "I-R3",
+    "framework": "AI Landing Zones – Design Checklist (Identity)",
+    "source_area": "SECID",
+    "recommendation_quote": "Wherever possible, eliminate static API keys in favor of Microsoft Entra ID for authentication. This step enhances security through centralized identity management and reduces secret management overhead. Also limit the distribution of API keys. Instead, prefer identities in Microsoft Entra ID over API keys for authentication. Audit the list of individuals with API key access to ensure it's current.",
+    "archived_principle": "Use Microsoft Entra ID for authentication",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-I-R4",
+    "original_id": "I-R4",
+    "framework": "AI Landing Zones – Design Checklist (Identity)",
+    "source_area": "SECID",
+    "recommendation_quote": "Implement Conditional Access policies that respond to unusual sign-in activity or suspicious behavior. Use signals like user location, device state, and sign-in behavior to trigger extra verification steps. Require MFA for accessing critical AI resources to enhance security. Restrict access to AI infrastructure based on geographic locations or trusted IP ranges. Ensure that only compliant devices (those meeting security requirements) can access AI resources.",
+    "archived_principle": "Use Conditional Access policies",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-I-R5",
+    "original_id": "I-R5",
+    "framework": "AI Landing Zones – Design Checklist (Identity)",
+    "source_area": "SECID",
+    "recommendation_quote": "Implement least privilege access by implementing role-based access control (RBAC) to provide minimal access to data and services. Assign roles to users and groups based on their responsibilities. Use Azure RBAC to fine-tune access control for specific resources such as virtual machines and storage accounts. Ensure users have only the minimum level of access necessary to perform their tasks. Regularly review and adjust permissions to prevent privilege creep.",
+    "archived_principle": "Configure least privilege access",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-I-R6",
+    "original_id": "I-R6",
+    "framework": "AI Landing Zones – Design Checklist (Identity)",
+    "source_area": "SECID",
+    "recommendation_quote": "Secure external access to AI model endpoints. Require clients to authenticate using Microsoft Entra ID when accessing AI model endpoints.",
+    "archived_principle": "Disable key based access and only have access to AI Model endpoints using Microsoft Entra ID.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-M-R1",
+    "original_id": "M-R1",
+    "framework": "AI Landing Zones – Design Checklist (Monitoring)",
+    "source_area": "OPS",
+    "recommendation_quote": "Implement monitoring to ensure that it remain aligned with applications and workload KPIs",
+    "archived_principle": "Monitor AI models, AI resources, AI data of the workload",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-M-R2",
+    "original_id": "M-R2",
+    "framework": "AI Landing Zones – Design Checklist (Monitoring)",
+    "source_area": "OPS",
+    "recommendation_quote": "Enable recommended alert rules to receive notifications of deviations that indicate a decline in workload health.",
+    "archived_principle": "Review recommended alerts for AI in Azure Monitor Baseline Alerts.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-M-R3",
+    "original_id": "M-R3",
+    "framework": "AI Landing Zones – Design Checklist (Monitoring)",
+    "source_area": "OPS",
+    "recommendation_quote": "For generative AI workloads, use Azure AI Foundry's built-in evaluation and manual monitoring capabilities. Also monitor latency in response times or the accuracy of vector search results to enhance user experiences. In Azure AI Foundry, enable tracing to collect trace data for each request, aggregated metrics, and user feedback. Enable diagnostic logging for each Azure AI service.",
+    "archived_principle": "Monitor the performance of a generative AI application",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-M-R4",
+    "original_id": "M-R4",
+    "framework": "AI Landing Zones – Design Checklist (Monitoring)",
+    "source_area": "OPS",
+    "recommendation_quote": "Use diagnostic settings to capture logs and metrics for all key services, such as Azure AI Foundry and Azure AI services . Specific services should capture audit logs and relevant service-specific logs.",
+    "archived_principle": "Have diagnostic settings configured to capture logs and metrics of all deployed resources to a log analytics workspace.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-M-R5",
+    "original_id": "M-R5",
+    "framework": "AI Landing Zones – Design Checklist (Monitoring)",
+    "source_area": "OPS",
+    "recommendation_quote": "Track accuracy and data drift continuously in generative and nongenerative AI to ensure that models remain relevant. Monitoring can alert you when model predictions or large language model responses deviate from expected behavior. This deviation indicates a need for retraining or adjustment. Set up custom alerts to detect performance thresholds. This approach enables early intervention when problems arise. Use evaluations in Azure AI Foundry .",
+    "archived_principle": "Monitor model & data drift.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-M-R6",
+    "original_id": "M-R6",
+    "framework": "AI Landing Zones – Design Checklist (Monitoring)",
+    "source_area": "OPS",
+    "recommendation_quote": "Use services such as Azure Monitor Network Insights and Azure Network Watcher to gain visibility into network performance and health.",
+    "archived_principle": "Leverage Azure Monitor insights and Azure network watcher for trouble shooting networking issues.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-REL-R1",
+    "original_id": "R-R1",
+    "framework": "AI Landing Zones – Design Checklist (Reliability)",
+    "source_area": "COMPUTE",
+    "recommendation_quote": "Establish a policy for business continuity and disaster recovery for your AI endpoints and AI data. Configure baseline disaster recovery for resources that host your AI model endpoints. These resources include Azure AI Foundry , Azure Machine Learning , Azure OpenAI , or Azure AI services. All Azure data stores, such as Azure Blob Storage , Azure Cosmos DB , and Azure SQL Database , provide reliability and disaster recovery guidance that you should follow. Implement multi-region deployments to ensure high availability and resiliency for both generative and nongenerative AI systems For more information, see multi-region deployment in Azure AI Foundry , Azure Machine Learning , and Azure OpenAI .",
+    "archived_principle": "Multi Region Disaster Recovery: Consider Multi Region in at least two regions to provide high availability and ensure for Disaster Recovery.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-RO-R1",
+    "original_id": "R-R1",
+    "framework": "AI Landing Zones – Design Checklist (Resource Organization)",
+    "source_area": "GOV",
+    "recommendation_quote": "Before deployment, ensure that there's availability in the region for the AI resources that you need. Certain regions might not provide specific AI services or might have limited features, which can affect the functionality of your solution. This limitation can also affect the scalability of your deployment. For example, Azure OpenAI service availability can vary based on your deployment model. These deployment models include global standard, global provisioned, regional standard, and regional provisioned. Check the AI service to confirm that you have access to the necessary resources. To capture and use completions data, you will need to make sure your resource region is included in: swedencentral, northcentralus, eastus2 Azure OpenAI Evaluation is only supported in the following regions: [eastus2, northcentralus, swedencentral, switzerlandwest, uaenorth], and your region is eastus. Change to a valid region to use Azure OpenAI Evaluation. Real-time audio is only available in the following regions: eastus2swedencentral Assistants are only available in the following regions: australiaeast, centraluseuap, eastus, eastus2, francecentral, japaneast, norwayeast, southindia, swedencentral, uksouth, westus, westus3",
+    "archived_principle": "Select regions based on the combination of regional availability of Azure Services and their configuration.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-RO-R2",
+    "original_id": "R-R2",
+    "framework": "AI Landing Zones – Design Checklist (Resource Organization)",
+    "source_area": "GOV",
+    "recommendation_quote": "Consider the quota or subscription limits in your chosen region as your AI workloads grow. Azure services have regional subscription limits. These limits can affect large-scale AI model deployments, such as large inference workloads. To prevent disruptions, contact Azure support in advance if you foresee a need for extra capacity.",
+    "archived_principle": "Review quota required to deploy the resources.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-RO-R3",
+    "original_id": "R-R3",
+    "framework": "AI Landing Zones – Design Checklist (Resource Organization)",
+    "source_area": "GOV",
+    "recommendation_quote": "Align the resource organization with Azure’s subscription quota limitations to avoid unexpected service disruptions.",
+    "archived_principle": "Consider Azure subscription and region quota limits",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-RO-R4",
+    "original_id": "R-R4",
+    "framework": "AI Landing Zones – Design Checklist (Resource Organization)",
+    "source_area": "GOV",
+    "recommendation_quote": "Azure offers tools like Azure AI Foundry Resource and projects to enforce governance and security. Use an AI Foundry Resource per billing boundary to allocate costs across different teams. For more information, see Manage AI deployments . Use distinct AI Foundry resoruces to organize and manage AI artifacts like datasets, models, and experiments. AI Foundry resoruces centralize resource management and simplify access control. For example, use projects within Azure AI Foundry to manage resources and permissions efficiently, facilitating collaboration while maintaining security boundaries.",
+    "archived_principle": "Consider scaling through multi-account and multi-project deployment.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-S-R1",
+    "original_id": "S-R1",
+    "framework": "AI Landing Zones – Design Checklist (Security)",
+    "source_area": "SECID",
+    "recommendation_quote": "MDC can help discover generative AI workloads and in predeployment generative AI artifacts. Also AI security posture management in Microsoft Defender for Cloud can be used to automate detection and remediation of generative AI risks. Defender for Cloud provides a cost-effective approach for detecting configurations in your deployed resources that aren't secure. You should also enable AI threat protection.",
+    "archived_principle": "Review the Microsoft Defender for Cloud Recommendations for compliance.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-S-R2",
+    "original_id": "S-R2",
+    "framework": "AI Landing Zones – Design Checklist (Security)",
+    "source_area": "SECID",
+    "recommendation_quote": "Leverage Azure security baselines and follow Azure Service Guides for security guidance.",
+    "archived_principle": "Comply with Microsoft Cloud Security Baseline",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-S-R3",
+    "original_id": "S-R3",
+    "framework": "AI Landing Zones – Design Checklist (Security)",
+    "source_area": "SECID",
+    "recommendation_quote": "Sensitive data in AI workflows increases the risk of insider threats, data leaks and data oversharing. Use tools like Microsoft Purview Insider Risk Management to assess enterprise-wide data risks and prioritize them based on data sensitivity.",
+    "archived_principle": "Leverage Purview to secure data in an AI landing zone.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-S-R4",
+    "original_id": "S-R4",
+    "framework": "AI Landing Zones – Design Checklist (Security)",
+    "source_area": "SECID",
+    "recommendation_quote": "Leverage MITRE ATLAS and OWASP Generative AI risk for identifying risks across the architecture.",
+    "archived_principle": "Review Industry Security Standards for AI",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-S-R5",
+    "original_id": "S-R5",
+    "framework": "AI Landing Zones – Design Checklist (Security)",
+    "source_area": "SECID",
+    "recommendation_quote": "Regularly inspect the data returned by AI models to detect and mitigate risks associated with malicious or unpredictable user prompts. Implement Prompt Shields to scan text for the risk of a user input attack on generative Al models.",
+    "archived_principle": "Monitor outputs and apply prompt shielding using AI Content Safety.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-N-R1",
+    "original_id": "N-R1",
+    "framework": "AI Landing Zones – Design Checklist (Networking)",
+    "source_area": "NETWORK",
+    "recommendation_quote": "Azure DDoS Protection should be enabled to safeguard AI services from potential disruptions and downtime caused by distributed denial of service attacks. Enable Azure DDoS protection at the virtual network level to defend against traffic floods targeting internet-facing applications.",
+    "archived_principle": "Leverrage DDoS in case the workload is public facing. In case of existing platform landing zone, the central DDoS service should be used instead.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-N-R2",
+    "original_id": "N-R2",
+    "framework": "AI Landing Zones – Design Checklist (Networking)",
+    "source_area": "NETWORK",
+    "recommendation_quote": "AI development access should use a jumpbox within the virtual network of the workload or through a connectivity hub virtual network. Use Azure Bastion to securely connect to virtual machines interacting with AI services. Azure Bastion provides secure RDP/SSH connectivity without exposing VMs to the public internet. Enable Azure Bastion to ensure encrypted session data and protect access through TLS-based RDP/SSH connections.",
+    "archived_principle": "Use a jumpbox that can be accessed through bastion. In case of existing platform landing zone the central jump box and bastion service should be used instead.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-N-R3",
+    "original_id": "N-R3",
+    "framework": "AI Landing Zones – Design Checklist (Networking)",
+    "source_area": "NETWORK",
+    "recommendation_quote": "No PaaS services or AI model endpoints should be accessible from the public internet. Private endpoints to provide private connectivity to Azure services within a virtual network. Private endpoints provide secure, private access to PaaS portals like Azure AI Foundry. For Azure AI Foundry, Configure the managed virtual network and use private endpoints .",
+    "archived_principle": "Use Private endpoint for the AI resources and infact for all PaaS services.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-N-R4",
+    "original_id": "N-R4",
+    "framework": "AI Landing Zones – Design Checklist (Networking)",
+    "source_area": "NETWORK",
+    "recommendation_quote": "Utilize network security groups (NSGs) to define and apply access policies that govern inbound and outbound traffic to and from AI workloads. These controls can be used to implement the principle of least privilege, ensuring that only essential communication is permitted.",
+    "archived_principle": "Use Network Security Groups in the AI Landing Zone on all virtual networks implemented as part of the architecture.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-N-R5",
+    "original_id": "N-R5",
+    "framework": "AI Landing Zones – Design Checklist (Networking)",
+    "source_area": "NETWORK",
+    "recommendation_quote": "Azure WAF helps protect your AI workloads from common web vulnerabilities, including SQL injections and cross-site scripting attacks. Configure Azure WAF on Application Gateway for workloads that require enhanced security against malicious web traffic. For Azure AI Services, Restrict access to select virtual networks or use private endpoints",
+    "archived_principle": "Use App Gateway or Azure Front Door with WAF in the AI Landing Zone for the application public front-end based on regional or global deployment.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-N-R6",
+    "original_id": "N-R6",
+    "framework": "AI Landing Zones – Design Checklist (Networking)",
+    "source_area": "NETWORK",
+    "recommendation_quote": "The AI Landing Zone should use Azure API Management for load balancing API requests to AI endpoints. Consider using Azure API Management (APIM) as a generative AI gateway within your virtual networks. A generative AI gateway sits between your front-end and the AI endpoints. Application Gateway, WAF policies, and APIM within the virtual network is an established architecture in generative AI solutions. For more information, see AI Hub architecture and Deploy Azure API Management instance to multiple Azure regions . A generative AI gateway allows you to track token usage, throttle token usage, apply circuit breakers, and route to different AI endpoints to control costs. Consider a generative AI gateway for monitoring. A reverse proxy like Azure API Management allows you to implement logging and monitoring that aren't native to the platform. API Management allows you to collect source IPs, input text, and output text. For more information, see Implement logging and monitoring for Azure OpenAI Service language models . . Azure API Management (APIM) can help ensure consistent security across AI workloads. Use its built-in policies for traffic control and security enforcement. Integrate APIM with Microsoft Entra ID to centralize authentication and authorization and ensure only authorized users or applications interact with your AI models. Ensure you configure least privilege access on the reverse proxy’s managed identity . For more information, see AI authentication with APIM",
+    "archived_principle": "Consider APIM as AI Gateway in the AI landing zone with AI Foundry.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-N-R7",
+    "original_id": "N-R7",
+    "framework": "AI Landing Zones – Design Checklist (Networking)",
+    "source_area": "NETWORK",
+    "recommendation_quote": "Azure Firewall enforces security policies for outgoing traffic before it reaches the internet. Use it to control and monitor outgoing traffic and enable SNAT to conceal internal IP addresses by translating private IPs to the firewall's public IP. It ensures secure and identifiable outbound traffic for better monitoring and security.",
+    "archived_principle": "Use Firewall either in the AI Landing Zone or from the platform landing zone (preferred) along with a UDR to the Azure or 3P Firewall.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-N-R8",
+    "original_id": "N-R8",
+    "framework": "AI Landing Zones – Design Checklist (Networking)",
+    "source_area": "NETWORK",
+    "recommendation_quote": "Private DNS zones centralize and secure DNS management for accessing PaaS services within your AI network. Set up Azure policies that enforce private DNS zones and require private endpoints to ensure secure, internal DNS resolutions. If you don't have central Private DNS Zones, the DNS forwarding doesn't work until you add conditional forwarding manually. For example, see using custom DNS with Azure AI Foundry hubs and Azure Machine Learning workspace. Custom DNS servers manage PaaS connectivity within the network, bypassing public DNS. Configure private DNS zones in Azure to resolve PaaS service names securely and route all traffic through private networking channels.",
+    "archived_principle": "Use Private DNS Zones either in the AI Landing Zone or from the platform landing zone (preferred) for integrated private endpoints with Private DNS Zones for proper DNS resolution and successful private endpoint functionality.",
+    "interpretation_is_not_official_score": true
+  },
+  {
+    "id": "AILZ-N-R9",
+    "original_id": "N-R9",
+    "framework": "AI Landing Zones – Design Checklist (Networking)",
+    "source_area": "NETWORK",
+    "recommendation_quote": "Limiting outbound traffic from your AI model endpoints helps protect sensitive data and maintain the integrity of your AI models. For minimizing data exfiltration risks, restricting outbound traffic to approved services or fully qualified domain names (FQDNs) and maintain a list of trusted sources. You should only allow unrestricted internet outbound traffic if you need access to public machine learning resources but regularly monitor and update your systems. For more information, see Azure AI services , Azure AI Foundry , and Azure Machine Learning.",
+    "archived_principle": "Restrict Outbound by default in the AI Landing Zone should provide guidance and implementation restricting outbound access by default.",
+    "interpretation_is_not_official_score": true
+  }
+]

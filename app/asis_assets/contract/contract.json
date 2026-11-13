@@ -1,0 +1,77 @@
+{
+  "contract_id": "asis-authoring-r2",
+  "status": "design_proposal_not_deployed",
+  "legacy_wara_ppt_allowed": false,
+  "legacy_wara_result_excel_allowed": false,
+  "retain_collection_data": true,
+  "retain_prior_valid_artifacts_internally": true,
+  "retired_customer_result_names": [
+    "WARA final",
+    "WARA merged",
+    "Assessment-Findings-Report",
+    "Expert-Analysis"
+  ],
+  "required_customer_result_roles": [
+    "asis_report_pptx",
+    "asis_backdata_xlsx"
+  ],
+  "content_authority": {
+    "path": "/Users/youk/.hermes/cache/documents/doc_f2eea57fad2f_02_ASIS_Report_E.pptx",
+    "sha256": "af1316a8e490ecd04bcd68c33d2b9b67cf579214731e2a91a3fb85ec8fae8829",
+    "slide_count": 20,
+    "size_emu": {
+      "cx": "12192000",
+      "cy": "6858000"
+    },
+    "unchanged": true
+  },
+  "visual_authority": {
+    "path": "/Users/youk/.hermes/cache/documents/doc_fa368c71eeb0_AI_Cost_Governance_Optimization_Proposal_v18 (1).pptx",
+    "sha256": "802f9b80e0dfa3e9b8f51363d129b791d50793513d7fb7dd6ffd3a21a798a539",
+    "slide_count": 58,
+    "size_emu": {
+      "cx": "12192000",
+      "cy": "6858000"
+    },
+    "unchanged": true
+  },
+  "logical_frame": {
+    "path": "/Users/youk/.hermes/cache/documents/doc_f03ff7d5f1a5_S-RBS 2.0 Reliability VBD - final.pptx",
+    "sha256": "0095de9ebb9e0ac0614151647835838ec9a6159490104cfbfcfeac6322f3812f",
+    "slide_count": 33,
+    "size_emu": {
+      "cx": "10440988",
+      "cy": "7308850"
+    },
+    "unchanged": true
+  },
+  "reference_images": [
+    {
+      "source_id": "img_734e5dc9e1cb.png",
+      "role": "fact_finding_to_synthesis",
+      "path": "/Users/youk/.hermes/cache/images/img_734e5dc9e1cb.png",
+      "sha256": "e4d04beb0ed971c362049827c56195ea54c48afe5c4f278d80179981bf23376e",
+      "message_id": 138078,
+      "reference_only": true
+    },
+    {
+      "source_id": "img_ee77215db7e8.png",
+      "role": "diagnosis_to_action",
+      "path": "/Users/youk/.hermes/cache/images/img_ee77215db7e8.png",
+      "sha256": "4f3a2cb936e9bf2508efcf6a2cc41fb57e66378361a65f68e4c6717fc56656f4",
+      "message_id": 138079,
+      "reference_only": true
+    }
+  ],
+  "no_fixed_customer_counts": true,
+  "relation_chain": [
+    "fact",
+    "area_implication",
+    "direction",
+    "diagnosis",
+    "action"
+  ],
+  "production_api_shape_claimed": false,
+  "app_or_production_modified": false,
+  "customer_report_model_called": false
+}

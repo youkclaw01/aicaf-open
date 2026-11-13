@@ -1,0 +1,37 @@
+{
+  "schema": "portable-test-fixtures/1",
+  "fixtures": [
+    {
+      "path": "architecture/topology.synthetic.json",
+      "classification": "synthetic_test_only",
+      "sha256": "35629974617d0d639145cfe413b413d01d4dfac3d7da035c5e8aaeb79a280c81"
+    },
+    {
+      "path": "interview/baseline/question_contract_current.json",
+      "classification": "product_contract_baseline",
+      "sha256": "0839a93e53eb61a7cd0664e19d0297ae438b78644912ec7addb0425ab6b1cd11"
+    },
+    {
+      "path": "interview/baseline/interview_report.py",
+      "classification": "product_code_baseline",
+      "sha256": "6e8fb4a716c1dadb36f3efe9c3c8e5e2364b9068c75ab23e1776ab02dcc3cfdc"
+    },
+    {
+      "path": "interview/questionnaires/questionnaire-new.xlsx",
+      "classification": "approved_questionnaire_template",
+      "sha256": "56f53a46393fed5b0170d7e9f0c624a511acacb679afa943ef82236b5e6d8ed0"
+    },
+    {
+      "path": "interview/questionnaires/questionnaire-existing.xlsx",
+      "classification": "approved_questionnaire_template",
+      "sha256": "7aee38adaea4ca1e2c35b900496eff32d3fa2e80b9d4702fe1cc059672f6cbe9"
+    },
+    {
+      "path": "interview/CONTRACT_FREEZE.json",
+      "classification": "product_contract_baseline",
+      "sha256": "02b75ed06725c713fc066c42e464a317c1a146e3c21babfd32944ceb0cada7ac"
+    }
+  ],
+  "synthetic_helper_sha256": "1675246f036e9387d7853bc0f219664c638b34cb0a286a8012200b15172a91ca",
+  "privacy_policy": "no_customer_resource_snapshot_no_interview_answers_no_profile_session_no_credentials"
+}

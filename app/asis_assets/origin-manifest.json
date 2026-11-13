@@ -1,0 +1,67 @@
+[
+  {
+    "source": "/Users/youk/.hermes/brainstorm/agents/asis-method-recheck-20261009/prompt-package/contract.json",
+    "relative": "asis_assets/contract/contract.json",
+    "sha256": "72a7fea469ccbe7e763bd56cf27b8b8f7e2233208d560d707b31642c512ebc35"
+  },
+  {
+    "source": "/Users/youk/.hermes/brainstorm/agents/asis-method-recheck-20261009/prompt-package/input.schema.json",
+    "relative": "asis_assets/contract/input.schema.json",
+    "sha256": "81e137c1cf7199e5cf30dab095ecd0a99f48e8f2d5bec27527b9705935c05345"
+  },
+  {
+    "source": "/Users/youk/.hermes/brainstorm/agents/asis-method-recheck-20261009/prompt-package/output.schema.json",
+    "relative": "asis_assets/contract/output.schema.json",
+    "sha256": "2315d3e0c49511f0e774ee15806ca03c820880229eb73fb40c7270b5baf0aafb"
+  },
+  {
+    "source": "/Users/youk/.hermes/brainstorm/agents/asis-method-recheck-20261009/prompt-package/validate_contract.py",
+    "relative": "asis_assets/contract/validate_contract.py",
+    "sha256": "41d4de7ddef3222258fc63288b5d90e43e24c25100749ac01e23505a1830f2be"
+  },
+  {
+    "source": "/Users/youk/.hermes/brainstorm/agents/asis-method-recheck-20261009/prompt-package/prompts/P1-stage.txt",
+    "relative": "asis_assets/contract/prompts/P1-stage.txt",
+    "sha256": "b55d7bbe0626a38626a8fb22c158446d7ecdad1b5dd3151b9cd0380e2781a3fa"
+  },
+  {
+    "source": "/Users/youk/.hermes/brainstorm/agents/asis-method-recheck-20261009/prompt-package/prompts/P2-stage.txt",
+    "relative": "asis_assets/contract/prompts/P2-stage.txt",
+    "sha256": "ca49c84193aa79bb023c90546def8881b6888ce9e98c1f4082ae36bff4c6b43e"
+  },
+  {
+    "source": "/Users/youk/.hermes/brainstorm/agents/asis-method-recheck-20261009/prompt-package/prompts/P3-stage.txt",
+    "relative": "asis_assets/contract/prompts/P3-stage.txt",
+    "sha256": "91f39ff0bb29ae878b28b831eee176f9ed037144c216b6398d2cd20770ad964c"
+  },
+  {
+    "source": "/Users/youk/.hermes/brainstorm/agents/asis-method-recheck-20261009/prompt-package/prompts/P4-stage.txt",
+    "relative": "asis_assets/contract/prompts/P4-stage.txt",
+    "sha256": "3e8ad9ad1f704ae385c88543f89ec44833d161643fc91d33ebb0e1e6257c3416"
+  },
+  {
+    "source": "/Users/youk/.hermes/brainstorm/agents/asis-method-recheck-20261009/prompt-package/prompts/P5-stage.txt",
+    "relative": "asis_assets/contract/prompts/P5-stage.txt",
+    "sha256": "b0028e515bed8fd0543582dfb399d25077bfcab56167c7ce26641a78055ff370"
+  },
+  {
+    "source": "/Users/youk/.hermes/brainstorm/agents/asis-method-recheck-20261009/prompt-package/prompts/P6-stage.txt",
+    "relative": "asis_assets/contract/prompts/P6-stage.txt",
+    "sha256": "04b06d5e387b48f439ebe9db5146306230a789ae9efe7fff7ae58e01de7293fd"
+  },
+  {
+    "source": "/Users/youk/.hermes/brainstorm/agents/asis-method-recheck-20261009/prompt-package/prompts/P0-system.txt",
+    "relative": "asis_assets/contract/prompts/P0-system.txt",
+    "sha256": "2cb2ebefcbfabba670c3650dec40e178750604fa95b0ad0ab43700598699ec6e"
+  },
+  {
+    "source": "/Users/youk/.hermes/brainstorm/template/AI_Cost_Governance_v18.pptx",
+    "relative": "asis_assets/visual-v18.pptx",
+    "sha256": "802f9b80e0dfa3e9b8f51363d129b791d50793513d7fb7dd6ffd3a21a798a539"
+  },
+  {
+    "source": "/Users/youk/.hermes/cache/documents/doc_f2eea57fad2f_02_ASIS_Report_E.pptx",
+    "relative": "asis_assets/content-asis-e.pptx",
+    "sha256": "af1316a8e490ecd04bcd68c33d2b9b67cf579214731e2a91a3fb85ec8fae8829"
+  }
+]

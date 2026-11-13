@@ -1,0 +1,86 @@
+/* 비용 v2만 범위를 지정하고 포털의 Apple 디자인 토큰을 재사용한다. */
+#cost-root .cf-dashboard { min-width: 0; }
+#cost-root .cf-heading { display: flex; align-items: center; flex-wrap: wrap; gap: var(--s3); }
+#cost-root .cf-heading h2 { margin: 0; }
+#cost-root .cf-summary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s5); padding: var(--s4) 0; }
+#cost-root .cf-summary > div { display: flex; flex-direction: column; gap: var(--s2); min-width: 0; }
+#cost-root .cf-summary strong { font-size: 26px; font-weight: 600; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+#cost-root .cf-value { font-variant-numeric: tabular-nums; }
+#cost-root .cf-info { color: var(--link); font-size: 12px; cursor: help; }
+#cost-root .cf-na { color: var(--muted); font-size: 15px; font-weight: 400; }
+#cost-root .cf-error { color: var(--red); background: var(--red-t); margin-bottom: var(--s4); }
+#cost-root .cf-controls { margin: var(--s5) 0 var(--s3); }
+#cost-root .cf-controls select, #cost-root .cf-controls input { width: 100%; min-width: 0; max-width: 100%; }
+#cost-root input:disabled, #cost-root select:disabled, #cost-root textarea:disabled { background: var(--fill2); color: var(--muted); cursor: default; }
+#cost-root .cf-grain { padding-top: var(--s3); border-top: 1px solid var(--hair); }
+#cost-root summary { cursor: pointer; font-size: 15px; font-weight: 600; }
+#cost-root .cf-filters { border-top: 1px solid var(--hair); margin-top: var(--s4); padding-top: var(--s4); }
+#cost-root .cf-bars { list-style: none; margin: var(--s4) 0 0; padding: 0; display: grid; gap: var(--s4); }
+#cost-root .cf-bar-label { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s4); font-size: 14px; }
+#cost-root .cf-bar-label .cf-value { flex: none; }
+#cost-root .cf-link { background: transparent; color: var(--link); padding: 0; height: auto; min-height: 24px; justify-content: flex-start; border-radius: 0; text-align: left; white-space: normal; line-height: 1.4; overflow-wrap: anywhere; }
+#cost-root .cf-link:hover { background: transparent; text-decoration: underline; }
+#cost-root .cf-link:disabled { color: var(--muted); background: transparent; }
+#cost-root .cf-bar-track { height: 8px; border-radius: var(--r-sm); background: var(--fill2); margin-top: var(--s1); overflow: hidden; }
+#cost-root .cf-bar-fill { display: block; height: 100%; background: var(--blue); border-radius: inherit; }
+#cost-root .cf-negative { background: var(--muted); }
+#cost-root .cf-subheading { margin-top: var(--s6); padding-top: var(--s5); border-top: 1px solid var(--hair); }
+#cost-root .cf-ledger-tools { display: flex; align-items: end; justify-content: space-between; gap: var(--s4); flex-wrap: wrap; margin: var(--s4) 0; }
+#cost-root .cf-search { display: flex; flex-direction: column; gap: var(--s2); flex: 1; min-width: 180px; max-width: 440px; }
+#cost-root .cf-search input { min-width: 0; width: 100%; }
+#cost-root .cf-table-scroll { overflow-x: auto; overscroll-behavior-x: contain; max-width: 100%; min-width: 0; -webkit-overflow-scrolling: touch; }
+#cost-root .cf-table-scroll table { min-width: 760px; }
+#cost-root td { overflow-wrap: anywhere; }
+#cost-root td small { display: block; color: var(--muted); margin-top: var(--s1); font-size: 12px; }
+#cost-root .cf-right { text-align: right; white-space: nowrap; }
+#cost-root .cf-small { font-size: 13px; height: 32px; padding: 0 14px; }
+#cost-root .cf-pagination { display: flex; align-items: center; justify-content: flex-end; gap: var(--s3); margin-top: var(--s4); }
+#cost-root .cf-trend { display: block; width: 100%; height: auto; margin: var(--s4) 0; }
+#cost-root .cf-trend text { font-size: 11px; fill: var(--muted); }
+#cost-root .cf-dialog { width: min(840px, calc(100vw - 32px)); max-height: calc(100dvh - 64px); background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: var(--r-lg); padding: var(--s5); box-shadow: var(--shadow); overflow-y: auto; }
+#cost-root .cf-dialog::backdrop { background: color-mix(in srgb, var(--ink) 30%, transparent); }
+#cost-root .cf-dialog-head { display: flex; justify-content: space-between; align-items: center; gap: var(--s3); margin-bottom: var(--s5); }
+#cost-root .cf-dialog-head h3 { margin: 0; }
+#cost-root .cf-evidence { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: var(--s3); font-size: 14px; }
+#cost-root .cf-evidence dt { color: var(--muted); }
+#cost-root .cf-evidence dd { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+#cost-root pre { background: var(--fill2); border-radius: var(--r); padding: var(--s4); font-size: 12px; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }
+#cost-root [hidden] { display: none !important; }
+#cost-root .cf-comparison { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s4); margin: var(--s5) 0; }
+#cost-root .cf-comparison > div { display: flex; flex-direction: column; gap: var(--s2); min-width: 0; }
+#cost-root .cf-comparison strong { font-size: 22px; font-weight: 600; overflow-wrap: anywhere; }
+#cost-root .cf-action { min-width: 0; border: 1px solid var(--line); border-radius: var(--r); padding: var(--s4); margin: var(--s4) 0; }
+#cost-root .cf-action legend { font-size: 14px; font-weight: 600; padding: 0 var(--s2); }
+#cost-root .cf-action .cf-controls { margin-top: var(--s3); }
+#cost-root .cf-scope { grid-column: 1 / -1; }
+#cost-root .cf-scope select { font-size: 13px; max-width: 100%; white-space: normal; }
+#cost-root .cf-checks { display: grid; gap: var(--s3); margin: var(--s4) 0; }
+#cost-root .cf-check { display: flex; align-items: flex-start; gap: var(--s3); font-size: 14px; cursor: pointer; }
+#cost-root .cf-check input { flex: none; width: 18px; height: 18px; padding: 0; margin-top: 2px; accent-color: var(--blue); }
+#cost-root .cf-check small { display: block; margin-top: var(--s1); }
+#cost-root .cf-action-buttons { display: flex; gap: var(--s2); justify-content: flex-end; }
+#cost-root .cf-waterfall { display: block; width: 100%; min-width: 640px; height: auto; }
+#cost-root .cf-waterfall text { fill: var(--muted); font-size: 11px; }
+#cost-root .cf-chart-scroll { max-width: 100%; overflow-x: auto; }
+#cost-root .cf-observation { padding-top: var(--s3); border-top: 1px solid var(--hair); margin-top: var(--s5); }
+#cost-root .cf-save-bar { position: sticky; bottom: var(--s3); display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: var(--s3); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: var(--s3) var(--s4); box-shadow: var(--shadow); z-index: 2; margin-bottom: var(--s5); }
+#cost-root .cf-save-bar > span { margin-right: auto; }
+#cost-root .cf-job-meta { overflow-wrap: anywhere; }
+#cost-root .cf-job-steps { list-style: none; padding: 0; margin: var(--s4) 0; display: grid; gap: var(--s2); }
+#cost-root .cf-job-steps li { display: flex; justify-content: space-between; gap: var(--s4); align-items: center; font-size: 14px; border-bottom: 1px solid var(--hair); padding: var(--s2) 0; }
+#cost-root .cf-downloads { margin-top: var(--s4); }
+#cost-root .cf-history { display: flex; align-items: end; flex-wrap: wrap; gap: var(--s3); padding-top: var(--s4); }
+#cost-root .cf-history label { display: flex; flex: 1; min-width: 0; flex-direction: column; gap: var(--s2); }
+#cost-root .cf-history select { max-width: 100%; min-width: 0; width: 100%; }
+#cost-root .cf-price-button { height: auto; min-height: 48px; border-radius: var(--r); padding: var(--s3); white-space: normal; text-align: left; justify-content: flex-start; line-height: 1.45; overflow-wrap: anywhere; font-size: 14px; width: 100%; }
+#cost-root .cf-price-filters { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: var(--s4); margin-bottom: var(--s4); }
+#cost-root .cf-price-filters label { display: flex; flex-direction: column; gap: var(--s2); min-width: 0; }
+#cost-root .cf-price-filters input, #cost-root .cf-price-filters select { min-width: 0; max-width: 100%; }
+#cost-root .cf-quote { margin: var(--s4) 0; padding: var(--s3) var(--s4); background: var(--fill2); border-left: 3px solid var(--line); border-radius: 0 var(--r) var(--r) 0; font-size: 14px; }
+#cost-root .cf-quote p { margin: var(--s2) 0; }
+@media (max-width: 760px) {
+  #cost-root .cf-summary, #cost-root .cf-comparison { grid-template-columns: 1fr; }
+  #cost-root .cf-bar-label { align-items: flex-start; }
+  #cost-root .cf-evidence { grid-template-columns: 1fr; gap: var(--s2); }
+  #cost-root .cf-evidence dd { margin-bottom: var(--s3); }
+}
